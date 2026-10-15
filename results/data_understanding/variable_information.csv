@@ -1,0 +1,23 @@
+Variable,Type,Category,Description
+Diabetes_binary,Binary,Target,"Diabetes status (0 = no diabetes, 1 = prediabetes or diabetes)"
+HighBP,Binary,Health Condition,"High blood pressure indicator (0 = no high BP, 1 = high BP)"
+HighChol,Binary,Health Condition,"High cholesterol indicator (0 = no high cholesterol, 1 = high cholesterol)"
+CholCheck,Binary,Healthcare Access,"Cholesterol check in past 5 years (0 = no check, 1 = check)"
+BMI,Numerical,Physical Measurement,Body Mass Index (BMI)
+Smoker,Binary,Lifestyle,"Smoked at least 100 cigarettes in lifetime (0 = no, 1 = yes)"
+Stroke,Binary,Health Condition,"Ever told you had a stroke (0 = no, 1 = yes)"
+HeartDiseaseorAttack,Binary,Health Condition,"Coronary heart disease or myocardial infarction (0 = no, 1 = yes)"
+PhysActivity,Binary,Lifestyle,"Physical activity in past 30 days excluding work (0 = no, 1 = yes)"
+Fruits,Binary,Lifestyle,"Consume fruit 1 or more times per day (0 = no, 1 = yes)"
+Veggies,Binary,Lifestyle,"Consume vegetables 1 or more times per day (0 = no, 1 = yes)"
+HvyAlcoholConsump,Binary,Lifestyle,"Heavy alcohol consumption (0 = no, 1 = yes)"
+AnyHealthcare,Binary,Healthcare Access,"Have any health care coverage (0 = no, 1 = yes)"
+NoDocbcCost,Binary,Healthcare Access,"Could not see doctor because of cost in past 12 months (0 = no, 1 = yes)"
+GenHlth,Ordinal,General Health,Self-reported general health scale (1 = excellent to 5 = poor)
+MentHlth,Numerical,General Health,Days of poor mental health in past 30 days (0-30)
+PhysHlth,Numerical,General Health,Days of poor physical health in past 30 days (0-30)
+DiffWalk,Binary,Health Condition,"Serious difficulty walking or climbing stairs (0 = no, 1 = yes)"
+Sex,Binary,Demographic,"Biological sex (0 = female, 1 = male)"
+Age,Ordinal,Demographic,13-level age category (1 = 18-24 to 13 = 80+)
+Education,Ordinal,Socioeconomic,Education level scale (1 = never attended school to 6 = college graduate)
+Income,Ordinal,Socioeconomic,"Income scale (1 = <$10,000 to 8 = $75,000+)"

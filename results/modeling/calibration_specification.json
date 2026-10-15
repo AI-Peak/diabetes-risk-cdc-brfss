@@ -1,0 +1,65 @@
+{
+  "calibration_model_framework": "Cox Logistic Calibration Assessment",
+  "reference": "Cox, D. R. (1958). Two Further Applications of a Model for Binary Data. Journal of the Royal Statistical Society: Series B, 20(2), 394-397.",
+  "formulation": {
+    "equation": "logit(P(Y = 1 | p_hat)) = beta_0 + beta_1 * logit(p_hat)",
+    "linear_predictor": "eta = beta_0 + beta_1 * log(p_hat / (1 - p_hat))",
+    "probability_link": "P(Y = 1 | p_hat) = 1 / (1 + exp(-(beta_0 + beta_1 * logit(p_hat))))",
+    "intercept_parameter": "beta_0 (Joint Cox calibration intercept)",
+    "slope_parameter": "beta_1 (calibration slope / spread of predictions)"
+  },
+  "estimation_methodology": {
+    "engine": "statsmodels.api.GLM",
+    "family": "Binomial",
+    "link": "Logit",
+    "regularization": "None (unpenalized maximum likelihood)",
+    "simultaneous_estimation": true,
+    "target_dataset": "Independent internal holdout partition (n = 50,736)",
+    "input_probabilities": "Raw holdout predicted probabilities (p_hat) from selected classifier (XGBoost)",
+    "clip_epsilon": 1e-15
+  },
+  "protocol_declarations": {
+    "zero_probability_transformation": true,
+    "transformation_policy": "Holdout labels are strictly used to assess calibration slope and intercept. Holdout probabilities are NOT altered, rescaled, or transformed post-hoc. Reported screening, discrimination, and Brier metrics reflect the original raw model probabilities.",
+    "separation_of_threshold_and_calibration": true,
+    "threshold_selection_policy": "Operating decision threshold (t* = 0.13) was selected exclusively on development out-of-fold (OOF) cross-validation predictions to achieve target recall >= 0.80, completely isolated from holdout calibration modeling.",
+    "uncertainty_quantification": "1,000 stratified bootstrap resamples on the holdout evaluation partition to construct 2.5th and 97.5th percentile 95% confidence intervals."
+  },
+  "ideal_calibration_benchmarks": {
+    "ideal_slope": 1.0,
+    "ideal_intercept": 0.0,
+    "interpretation": {
+      "slope_less_than_1": "Predictions are moderately over-dispersed (extreme probabilities slightly too extreme)",
+      "slope_greater_than_1": "Predictions are under-dispersed",
+      "negative_intercept": "Predictions systematically slightly overestimate risk (average predicted probability exceeds empirical prevalence)"
+    }
+  },
+  "empirical_evaluations": {
+    "primary_stratified_evaluation": {
+      "partition": "Primary Stratified 80/20 Holdout",
+      "holdout_sample_size": 50736,
+      "empirical_prevalence": 0.139329,
+      "brier_score": 0.0974,
+      "brier_score_95_ci": [0.0964, 0.0983],
+      "non_informative_brier_baseline": 0.1199,
+      "cox_calibration_slope": 0.9589,
+      "cox_calibration_slope_95_ci": [0.9342, 0.9854],
+      "cox_calibration_intercept": -0.0515,
+      "cox_calibration_intercept_95_ci": [-0.0861, -0.0148],
+      "status": "Modest systematic calibration deviation; slope 95% CI strictly below 1.0; intercept 95% CI strictly below 0.0."
+    },
+    "profile_grouped_redevelopment_sensitivity": {
+      "partition": "Profile-Grouped Redevelopment Holdout (Zero Profile Overlap)",
+      "holdout_sample_size": 50736,
+      "empirical_prevalence": 0.139329,
+      "brier_score": 0.0964,
+      "brier_score_95_ci": [0.0954, 0.0974],
+      "non_informative_brier_baseline": 0.1199,
+      "cox_calibration_slope": 0.9878,
+      "cox_calibration_slope_95_ci": [0.9638, 1.0124],
+      "cox_calibration_intercept": -0.0158,
+      "cox_calibration_intercept_95_ci": [-0.0586, 0.0252],
+      "status": "Slope 95% CI spans 1.0; intercept 95% CI spans 0.0."
+    }
+  }
+}

@@ -1,0 +1,143 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script, but they contain paths
+#  and other system-specific information
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nosetests
+.javascript
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+vstester.html
+.covmap
+.coverage
+.coverage.*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Environments
+.env
+.venv
+venv
+ENV/
+env/
+venv/
+ENV/
+env/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Data folder exclusions (as requested, ignore heavy raw data)
+data/external/
+
+# Antigravity/Gemini local CLI cache
+.gemini/
+
+# Local CLI cache
+.claude/
+.codex-tmp/
+
+# Local reports and presentation artifacts
+AI Audit Log/
+/outputs/
+presentation/
+REVIEW_PLAN.md
+docs/script_thuyet_trinh.md
+docs/script_nhan.md
+docs/slide_outline.md
+docs/website_card_guide.md
+docs/card-guide/
+docs/prompt_build_card_guide_html.md
+paper.zip
+
+# Local build prompts (do not commit)
+prompts/
+
+# Next.js web app build artifacts
+node_modules/
+app/node_modules/
+.next/
+app/.next/
+app/out/
+app/.env*.local
+*.tsbuildinfo
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Keep paper sources/images in Git; ignore only LaTeX build intermediates
+*.aux
+*.bbl
+*.blg
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Local archives and temp files
+*.zip
+*.tar.gz
+*.tmp
+*.temp
+*.bak
+
+# Environment files
+.env
+.env.*
+!.env.example

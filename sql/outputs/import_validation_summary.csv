@@ -1,0 +1,5 @@
+Check,Expected,Actual,Status,Notes
+Total Row Count,Any positive integer,"229,474",PASSED,Matches processed records count from CSV import
+Duplicate Row Count,0,0,PASSED,Duplicate rows were successfully dropped during data cleaning stage
+Total NULL/Missing Values,0,0,PASSED,All fields are fully populated and complete
+Out-of-Range Row Count,0,0,PASSED,All values comply with CDC health survey codebook ranges

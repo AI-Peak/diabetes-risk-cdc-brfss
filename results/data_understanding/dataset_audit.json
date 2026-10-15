@@ -1,0 +1,22 @@
+{
+  "total_observations": 253680,
+  "total_features": 21,
+  "exact_duplicate_surplus": 24206,
+  "exact_duplicate_surplus_pct": 9.5419,
+  "exact_duplicate_in_groups": 35575,
+  "exact_duplicate_in_groups_pct": 14.0236,
+  "exact_duplicate_groups": 11369,
+  "predictor_profile_unique": 227908,
+  "predictor_profile_surplus": 25772,
+  "predictor_profile_surplus_pct": 10.1593,
+  "predictor_profile_in_groups": 38000,
+  "predictor_profile_in_groups_pct": 14.9795,
+  "predictor_profile_groups": 12228,
+  "conflicting_label_profiles": 1566,
+  "conflicting_label_observations": 5218,
+  "conflicting_label_observations_pct": 2.0569,
+  "class_0_count": 218334,
+  "class_0_pct": 86.0667,
+  "class_1_count": 35346,
+  "class_1_pct": 13.9333
+}

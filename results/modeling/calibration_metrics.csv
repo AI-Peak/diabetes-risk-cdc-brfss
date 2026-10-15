@@ -1,0 +1,2 @@
+Brier_Score,Brier_Score_95_CI_Lower,Brier_Score_95_CI_Upper,Calibration_Slope,Slope_95_CI_Lower,Slope_95_CI_Upper,Calibration_Intercept,Intercept_95_CI_Lower,Intercept_95_CI_Upper,Holdout_Sample_Size,Evaluation_Split
+0.0974,0.0964,0.0983,0.9589,0.9342,0.9854,-0.0515,-0.0861,-0.0148,50736,Untouched holdout test

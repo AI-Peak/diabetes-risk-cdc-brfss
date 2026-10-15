@@ -1,0 +1,41 @@
+Model Training and Selection Optimization Report
+====================================================================
+Model Selection Source: 5-Fold Stratified Cross-Validation on Development Set
+Holdout Test Used for Selection: No
+Selected Best Model: XGBoost
+Selection Criterion: Primary = Mean CV PR-AUC (0.4359), Tie-break = Mean CV ROC-AUC (0.8305)
+
+Development Set Size: 202,944 respondents
+Holdout Test Set Size: 50,736 respondents
+
+--------------------------------------------------------------------
+Development OOF Threshold Selection:
+- Selected Threshold: 0.13
+- Selection Rule: Recall >= 0.8 satisfied. Selected max Precision (0.3000), max F1 (0.4378).
+
+--------------------------------------------------------------------
+Final Evaluation on Untouched Holdout Test Set (N = 50,736):
+
+1. Default Threshold (0.50):
+   - Accuracy: 0.8655
+   - Precision: 0.5583
+   - Recall: 0.1654
+   - Specificity: 0.9788
+   - F1-score: 0.2552
+   - ROC-AUC: 0.8272
+   - PR-AUC: 0.4238
+   - Confusion Matrix: [TN=42,742, FP=925, FN=5,900, TP=1,169]
+
+2. Validation-Selected Screening Threshold (0.13):
+   - Accuracy: 0.7091
+   - Precision: 0.2991
+   - Recall: 0.8099 (95% CI: [0.8004, 0.8194])
+   - Specificity: 0.6928
+   - F1-score: 0.4369 (95% CI: [0.4317, 0.4418])
+   - ROC-AUC: 0.8272 (95% CI: [0.8223, 0.8322])
+   - PR-AUC: 0.4238 (95% CI: [0.4135, 0.4347])
+   - Confusion Matrix: [TN=30,251, FP=13,416, FN=1,344, TP=5,725]
+
+3. Operational Trade-off Impact:
+   - False Negatives Reduced: 4,556 (77.22%)
+   - False Positives Added: 12,491

@@ -1,0 +1,242 @@
+{
+  "title": "Predicting Diabetes Risk Using CDC Health Indicators - Final Results Summary",
+  "metadata": {
+    "generated_at_utc": "2026-10-04T15:41:07.634930+00:00",
+    "random_seed": 42,
+    "target_variable": "Diabetes_binary",
+    "class_definitions": {
+      "0": "No reported diabetes",
+      "1": "Prediabetes or diabetes"
+    }
+  },
+  "dataset": {
+    "n_records": 253680,
+    "n_features": 21,
+    "exact_duplicate_surplus_rows": 24206,
+    "repeated_predictor_profile_surplus_rows": 25772,
+    "multi_observation_predictor_profiles": 12228,
+    "records_in_repeated_predictor_groups": 38000,
+    "conflicting_label_profiles": 1566,
+    "observations_in_conflicting_profiles": 5218,
+    "target_distribution": {
+      "no_diabetes_count": 218334,
+      "no_diabetes_pct": 86.07,
+      "prediabetes_or_diabetes_count": 35346,
+      "prediabetes_or_diabetes_pct": 13.93
+    },
+    "split": {
+      "development_size": 202944,
+      "holdout_test_size": 50736,
+      "cv_folds": 5
+    }
+  },
+  "model_selection": {
+    "selected_model": "XGBoost",
+    "selection_criterion": "Primary = Mean 5-Fold CV PR-AUC on Development Set, Tie-break = Mean CV ROC-AUC",
+    "threshold_selection_criterion": "Recall >= 0.8 satisfied. Selected max Precision (0.3000), max F1 (0.4378).",
+    "cross_validation_results": {
+      "Logistic Regression": {
+        "Mean_PR_AUC": 0.4163,
+        "Std_PR_AUC": 0.0052,
+        "Mean_ROC_AUC": 0.825,
+        "Std_ROC_AUC": 0.0016,
+        "Mean_F1": 0.2444,
+        "Mean_Recall": 0.1561,
+        "Mean_Precision": 0.5628
+      },
+      "Decision Tree": {
+        "Mean_PR_AUC": 0.4015,
+        "Std_PR_AUC": 0.0065,
+        "Mean_ROC_AUC": 0.8169,
+        "Std_ROC_AUC": 0.0025,
+        "Mean_F1": 0.2254,
+        "Mean_Recall": 0.1417,
+        "Mean_Precision": 0.5509
+      },
+      "Random Forest": {
+        "Mean_PR_AUC": 0.4301,
+        "Std_PR_AUC": 0.007,
+        "Mean_ROC_AUC": 0.8271,
+        "Std_ROC_AUC": 0.0024,
+        "Mean_F1": 0.1913,
+        "Mean_Recall": 0.1133,
+        "Mean_Precision": 0.613
+      },
+      "XGBoost": {
+        "Mean_PR_AUC": 0.4359,
+        "Std_PR_AUC": 0.0077,
+        "Mean_ROC_AUC": 0.8305,
+        "Std_ROC_AUC": 0.0021,
+        "Mean_F1": 0.2587,
+        "Mean_Recall": 0.1665,
+        "Mean_Precision": 0.5805
+      }
+    }
+  },
+  "holdout_test_evaluation": {
+    "selected_threshold": 0.13,
+    "metrics_at_selected_threshold": {
+      "Accuracy": 0.7091,
+      "Precision": 0.2991,
+      "Recall": 0.8099,
+      "Specificity": 0.6928,
+      "F1-score": 0.4369,
+      "ROC-AUC": 0.8272,
+      "PR-AUC": 0.4238,
+      "TP": 5725,
+      "FP": 13416,
+      "TN": 30251,
+      "FN": 1344
+    },
+    "metrics_at_default_0.50": {
+      "Accuracy": 0.8655,
+      "Precision": 0.5583,
+      "Recall": 0.1654,
+      "Specificity": 0.9788,
+      "F1-score": 0.2552,
+      "ROC-AUC": 0.8272,
+      "PR-AUC": 0.4238,
+      "TP": 1169,
+      "FP": 925,
+      "TN": 42742,
+      "FN": 5900
+    },
+    "bootstrap_95_ci": {
+      "ROC-AUC": [
+        0.8223,
+        0.8322
+      ],
+      "PR-AUC": [
+        0.4135,
+        0.4347
+      ],
+      "Recall": [
+        0.8004,
+        0.8194
+      ],
+      "Precision": [
+        0.2953,
+        0.3028
+      ],
+      "F1-score": [
+        0.4317,
+        0.4418
+      ],
+      "Brier_Score": [
+        0.0964,
+        0.0983
+      ],
+      "Calibration_Slope": [
+        0.9342,
+        0.9854
+      ],
+      "Calibration_Intercept": [
+        -0.0861,
+        -0.0148
+      ]
+    },
+    "calibration": {
+      "Brier_Score": 0.0974,
+      "Brier_Score_95_CI_Lower": 0.0964,
+      "Brier_Score_95_CI_Upper": 0.0983,
+      "Calibration_Slope": 0.9589,
+      "Slope_95_CI_Lower": 0.9342,
+      "Slope_95_CI_Upper": 0.9854,
+      "Calibration_Intercept": -0.0515,
+      "Intercept_95_CI_Lower": -0.0861,
+      "Intercept_95_CI_Upper": -0.0148,
+      "Holdout_Sample_Size": 50736,
+      "Evaluation_Split": "Untouched holdout test"
+    }
+  },
+  "adjusted_association": {
+    "top_5_odds_ratios": [
+      {
+        "Variable": "GenHlth",
+        "Odds_Ratio": 7.589952182274092
+      },
+      {
+        "Variable": "BMI",
+        "Odds_Ratio": 1.059339688022274
+      },
+      {
+        "Variable": "Age",
+        "Odds_Ratio": 7.786404205944724
+      },
+      {
+        "Variable": "HighBP",
+        "Odds_Ratio": 2.048174464138522
+      },
+      {
+        "Variable": "HighChol",
+        "Odds_Ratio": 1.7093509649681171
+      }
+    ],
+    "max_vif": 357.58
+  },
+  "xai_consistency": {
+    "evidence_groups": {
+      "Group 1 \u2014 Consistent high evidence": [
+        "GenHlth",
+        "HighBP",
+        "Age",
+        "BMI",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "Group 4 \u2014 Weak evidence": [
+        "MentHlth",
+        "DiffWalk",
+        "Education",
+        "Stroke",
+        "Fruits",
+        "PhysHlth",
+        "PhysActivity",
+        "Smoker",
+        "Veggies",
+        "AnyHealthcare",
+        "NoDocbcCost"
+      ]
+    },
+    "total_features": 21,
+    "rank_sensitivity": [
+      {
+        "Top_K": 5,
+        "SHAP_vs_LR_Chi2_Overlap": 5,
+        "SHAP_vs_LR_Chi2_Jaccard": 1.0,
+        "SHAP_vs_LR_minus_df_Overlap": 5,
+        "SHAP_vs_LR_minus_df_Jaccard": 1.0,
+        "SHAP_vs_LR_div_df_Overlap": 4,
+        "SHAP_vs_LR_div_df_Jaccard": 0.6667,
+        "SHAP_vs_Univariate_Overlap": 3,
+        "SHAP_vs_Univariate_Jaccard": 0.4286
+      },
+      {
+        "Top_K": 10,
+        "SHAP_vs_LR_Chi2_Overlap": 10,
+        "SHAP_vs_LR_Chi2_Jaccard": 1.0,
+        "SHAP_vs_LR_minus_df_Overlap": 10,
+        "SHAP_vs_LR_minus_df_Jaccard": 1.0,
+        "SHAP_vs_LR_div_df_Overlap": 9,
+        "SHAP_vs_LR_div_df_Jaccard": 0.8182,
+        "SHAP_vs_Univariate_Overlap": 7,
+        "SHAP_vs_Univariate_Jaccard": 0.5385
+      },
+      {
+        "Top_K": 15,
+        "SHAP_vs_LR_Chi2_Overlap": 13,
+        "SHAP_vs_LR_Chi2_Jaccard": 0.7647,
+        "SHAP_vs_LR_minus_df_Overlap": 13,
+        "SHAP_vs_LR_minus_df_Jaccard": 0.7647,
+        "SHAP_vs_LR_div_df_Overlap": 13,
+        "SHAP_vs_LR_div_df_Jaccard": 0.7647,
+        "SHAP_vs_Univariate_Overlap": 12,
+        "SHAP_vs_Univariate_Jaccard": 0.6667
+      }
+    ]
+  }
+}

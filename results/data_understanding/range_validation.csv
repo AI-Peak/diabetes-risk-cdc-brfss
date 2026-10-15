@@ -1,0 +1,8 @@
+Variable,Expected Range,Actual Min,Actual Max,Violations Count,Status
+BMI,Non-negative value,12.0,98.0,0,PASSED
+MentHlth,0 to 30 days,0.0,30.0,0,PASSED
+PhysHlth,0 to 30 days,0.0,30.0,0,PASSED
+GenHlth,1 to 5 scale,1.0,5.0,0,PASSED
+Age,1 to 13 category scale,1.0,13.0,0,PASSED
+Education,1 to 6 category scale,1.0,6.0,0,PASSED
+Income,1 to 8 category scale,1.0,8.0,0,PASSED

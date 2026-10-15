@@ -1,0 +1,9 @@
+Category,Count,Percentage
+Total Observations,253680,100.00%
+Exact Full-Row Duplicate Surplus (22 cols),24206,9.5419%
+Total Rows in Exact Duplicate Groups,35575,14.0236%
+Unique Predictor Profiles (21 features),227908,89.8407%
+Predictor Profile Surplus Observations,25772,10.1593%
+Total Rows in Repeated Profile Groups,38000,14.9795%
+Conflicting-Label Predictor Profiles,1566,-
+Observations in Conflicting Profiles,5218,2.0569%

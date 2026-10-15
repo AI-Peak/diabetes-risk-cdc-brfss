@@ -1,0 +1,23 @@
+Column Name,Data Type,Unique Values,Min Value,Max Value,Expected Range,Status
+Diabetes_binary,TINYINT,2,0,1,0-1,Valid
+HighBP,TINYINT,2,0,1,0-1,Valid
+HighChol,TINYINT,2,0,1,0-1,Valid
+CholCheck,TINYINT,2,0,1,0-1,Valid
+BMI,TINYINT,84,12,98,> 0,Valid
+Smoker,TINYINT,2,0,1,0-1,Valid
+Stroke,TINYINT,2,0,1,0-1,Valid
+HeartDiseaseorAttack,TINYINT,2,0,1,0-1,Valid
+PhysActivity,TINYINT,2,0,1,0-1,Valid
+Fruits,TINYINT,2,0,1,0-1,Valid
+Veggies,TINYINT,2,0,1,0-1,Valid
+HvyAlcoholConsump,TINYINT,2,0,1,0-1,Valid
+AnyHealthcare,TINYINT,2,0,1,0-1,Valid
+NoDocbcCost,TINYINT,2,0,1,0-1,Valid
+GenHlth,TINYINT,5,1,5,1-5,Valid
+MentHlth,TINYINT,31,0,30,0-30,Valid
+PhysHlth,TINYINT,31,0,30,0-30,Valid
+DiffWalk,TINYINT,2,0,1,0-1,Valid
+Sex,TINYINT,2,0,1,0-1,Valid
+Age,TINYINT,13,1,13,1-13,Valid
+Education,TINYINT,6,1,6,1-6,Valid
+Income,TINYINT,8,1,8,1-8,Valid

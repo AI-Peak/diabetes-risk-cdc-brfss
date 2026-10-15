@@ -1,0 +1,5 @@
+Metric,Value
+Number of Rows,253680
+Number of Columns,22
+Dataset Shape,"(253680, 22)"
+Column Names,"Diabetes_binary, HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Fruits, Veggies, HvyAlcoholConsump, AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age, Education, Income"

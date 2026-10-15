@@ -1,0 +1,8 @@
+step,result,notes
+Load Raw Dataset,"Shape: (253680, 22)","Successfully loaded BRFSS 2015 dataset with 22 columns and 253,680 records."
+Check Missing Values,0 missing values,No missing value handling needed; survey records are fully populated.
+Inspect Exact Duplicates & Repeated Profiles,24206 exact duplicate surplus; 25772 profile surplus retained,Exact full-row duplicates (24206) and repeated feature profiles (25772) were intentionally retained because BRFSS lacks respondent identifiers to confirm duplicate identity. Discretized survey bins naturally produce identical profiles across distinct individuals.
+Check Expected Ranges,0 invalid values,All variables conform to CDC BRFSS codebook specifications.
+Convert Data Types,float64 -> int,"Converted categorical, ordinal, and binary float representations to integer types for clean formatting and memory efficiency."
+Save Cleaned Dataset,"Saved shape: (253680, 22)",Cleaned data successfully written to CSV file.
+Preserve Class Imbalance,Preserved,"Imbalance preserved without SMOTE/resampling. Raw: 13.93% positive, 86.07% negative. Cleaned: 13.93% positive, 86.07% negative."

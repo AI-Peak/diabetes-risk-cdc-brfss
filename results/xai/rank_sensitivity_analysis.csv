@@ -1,0 +1,4 @@
+Top_K,SHAP_vs_LR_Chi2_Overlap,SHAP_vs_LR_Chi2_Jaccard,SHAP_vs_LR_minus_df_Overlap,SHAP_vs_LR_minus_df_Jaccard,SHAP_vs_LR_div_df_Overlap,SHAP_vs_LR_div_df_Jaccard,SHAP_vs_Univariate_Overlap,SHAP_vs_Univariate_Jaccard
+5,5,1.0,5,1.0,4,0.6667,3,0.4286
+10,10,1.0,10,1.0,9,0.8182,7,0.5385
+15,13,0.7647,13,0.7647,13,0.7647,12,0.6667
