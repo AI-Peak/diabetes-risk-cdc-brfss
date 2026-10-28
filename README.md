@@ -1,10 +1,10 @@
 # Diabetes Risk Analytics with CDC BRFSS
 
-Interpretable machine learning and statistical analysis of **253,680 CDC BRFSS 2015 survey records**, with development-only threshold selection, internal holdout evaluation, calibration assessment and SHAP explanations.
+Interpretable machine learning and statistical analysis of **253,680 CDC BRFSS 2015 survey records**, with development-only threshold selection, internal holdout evaluation, calibration assessment, SHAP explanations, and targeted sensitivity experiments.
 
 **Repository maintainer:** [TunDec](https://github.com/BuildWithTunDec) · **Project:** DAP391M, FPT University
 
-[Manuscript](paper/main.tex) · [Methods and outputs](docs/paper_ready_outputs.md) · [Dataset description](docs/dataset_description.md) · [Data dictionary](docs/data_dictionary.md)
+[Dataset description](docs/dataset_description.md) · [Data dictionary](docs/data_dictionary.md) · [Analysis approach](docs/analytic_approach.md)
 
 ## Research questions
 
@@ -12,7 +12,7 @@ Interpretable machine learning and statistical analysis of **253,680 CDC BRFSS 2
 2. How do Logistic Regression, Decision Tree, Random Forest and XGBoost compare, and how does a screening threshold change the precision–recall trade-off?
 3. How closely do SHAP rankings align with multivariable likelihood-ratio contributions and univariate effect sizes?
 
-## Recorded results
+## Recorded baseline results
 
 | Measure | Result |
 |---|---:|
@@ -28,25 +28,30 @@ Interpretable machine learning and statistical analysis of **253,680 CDC BRFSS 2
 | Calibration slope / intercept | 0.9589 / -0.0515 |
 | SHAP–likelihood-ratio Spearman correlation | 0.9338 |
 
-These are the recorded analysis outputs, not a claim of a new full training run during repository preparation. PR-AUC is reported as **average precision**. Class 0 means no reported diabetes; class 1 combines prediabetes and diabetes. Repeated response profiles are retained because matching survey responses cannot establish duplicate individuals.
+These are recorded analysis outputs, not a claim of a new full training run during repository preparation. PR-AUC is reported as **average precision**. Class 0 means no reported diabetes; class 1 combines prediabetes and diabetes. Repeated response profiles are retained because matching survey responses cannot establish duplicate individuals.
+
+## Revision experiments
+
+The B1–B7 experiments are stored under `results/revision/` and cover duplicate-profile leakage, nested tuning, calibration uncertainty, decision-curve analysis, SHAP stability, VIF sensitivity, and threshold sensitivity. Each experiment contains its structured outputs and a short result summary. The corresponding source scripts are in `python_analysis/revision_*.py`, with the runner in `python_analysis/run_revision_experiments.py`.
+
+The consolidated JSON, summary, environment manifest, and artifact hash manifest are in `results/revision/`. The manifests are provenance records for the stored outputs; they do not replace the underlying experiment artifacts.
 
 ## Repository structure
 
 ```text
-paper/            Latest reviewed manuscript, bibliography and six final figures
-python_analysis/  Data processing, statistics, model training, SHAP and validation
-notebooks/        Interactive data-understanding notebook
+python_analysis/  Data processing, statistics, modeling, SHAP and revision experiments
 data/raw/         Original BRFSS-derived indicator data
 data/processed/   Processed analysis data
-results/          Recorded metrics, trained model, SHAP outputs and summaries
-docs/             Dataset documentation, RQ explanations and analysis figures
-sql/              SQL Server import/validation/EDA scripts and exports
-run_pipeline.py   Analysis pipeline entry point
+results/          Baseline outputs and B1–B7 revision artifacts
+docs/             Dataset documentation, research-question explanations and figures
+sql/              SQL Server import, validation and EDA scripts and exports
+tests/            Regression tests for the revision experiments
+run_pipeline.py   Baseline analysis pipeline entry point
 ```
 
-## Run the analysis
+## Run the baseline analysis
 
-Use **Python 3.13** (syntax requires Python 3.12 or later) and an isolated environment:
+Use **Python 3.13** (the project requires Python 3.12 or later) in an isolated environment:
 
 ```bash
 python -m venv .venv
@@ -56,45 +61,28 @@ python -m pip install -r requirements.txt
 python run_pipeline.py
 ```
 
-`requirements-lock.txt` preserves previously recorded package versions. Its installation in a clean environment has not yet been verified. A full run requires XGBoost, SHAP and all other listed dependencies, and can take substantial time for cross-validation and bootstrap calculations.
+`requirements-lock.txt` preserves a previously recorded environment. A full run requires XGBoost, SHAP and the other listed dependencies and can take substantial time for cross-validation and bootstrap calculations.
 
-To check existing outputs without retraining:
+To run the revision experiments:
 
 ```bash
-python python_analysis/validate_outputs.py
+python python_analysis/run_revision_experiments.py --experiment ALL
 ```
 
-Validation checks data dimensions, required artifacts, metric consistency and manuscript checksums. It does not independently validate every scientific claim. The threshold is chosen from development out-of-fold predictions; the final holdout is used for evaluation. Effect-size plotting runs once inside statistical analysis.
+To run their regression tests:
+
+```bash
+pytest tests/test_revision_part1.py
+```
 
 SQL scripts target SQL Server. Set `<PATH_TO_CSV>` in `sql/scripts/00_import_data.sql` before importing.
 
-## Manuscript
-
-`paper/` contains the revised manuscript from **Project_2_DAP (4).zip**, with the supplied text and six figures preserved. Research authorship is listed in the manuscript; repository commit attribution is separate from paper authorship.
-
-With Tectonic installed:
-
-```bash
-cd paper
-tectonic main.tex
-```
-
-The analysis pipeline does not overwrite approved manuscript text or figures. Publication tables and selected figures are maintained separately from generated analysis outputs. `paper/final_source_manifest.json` verifies the supplied source bytes.
-
-### Review status
-
-- The revised manuscript compiled successfully to 13 pages during review.
-- Revised odds ratios, VIF, calibration and holdout counts were checked against stored outputs.
-- Full model retraining and fresh-environment reproduction remain unverified.
-- Before submission, review the manuscript's statement about regenerating every figure/table, confirm its AI-use declaration, and update its older repository URL. The manuscript itself is preserved as supplied rather than silently edited.
-- Check the target venue's template, author information and disclosure requirements.
-
 ## Data provenance and interpretation
 
-The dataset is the BRFSS 2015-derived Diabetes Health Indicators dataset described in `docs/dataset_description.md` and the manuscript bibliography, attributed to CDC and the UCI/Kaggle distribution sources. No ownership of the underlying survey data is claimed. Consult the original source terms before redistribution or reuse.
+The dataset is the BRFSS 2015-derived Diabetes Health Indicators dataset described in `docs/dataset_description.md`, attributed to CDC and the UCI/Kaggle distribution sources. No ownership of the underlying survey data is claimed. Consult the original source terms before redistribution or reuse.
 
 This is an **unweighted, cross-sectional, self-reported survey analysis with internal validation**. It does not establish causality, prospective disease risk, clinical diagnostic validity or national prevalence. SHAP explains the fitted model; it does not identify causal effects. Calibration assessment does not itself recalibrate predictions. External validation remains necessary.
 
 ## Repository history
 
-This repository starts from a new snapshot of the project. Its Git history records maintenance of this snapshot; earlier development history is not imported. Existing scientific authorship and third-party attribution are retained.
+This repository starts from a new snapshot of the project. Its Git history records maintenance of this snapshot; earlier development history is not imported. Scientific authorship and third-party attribution belong to the underlying project and dataset sources.
