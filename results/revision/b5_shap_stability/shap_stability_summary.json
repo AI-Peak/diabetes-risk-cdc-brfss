@@ -1,0 +1,235 @@
+{
+  "fold_stability": {
+    "n_folds": 5,
+    "mean_pairwise_jaccard": 0.9273,
+    "min_pairwise_jaccard": 0.8182,
+    "pairwise_comparisons": [
+      {
+        "pair": "fold_1_vs_fold_2",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_1_vs_fold_3",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_1_vs_fold_4",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_1_vs_fold_5",
+        "jaccard_similarity": 0.8182,
+        "shared_count": 9
+      },
+      {
+        "pair": "fold_2_vs_fold_3",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_2_vs_fold_4",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_2_vs_fold_5",
+        "jaccard_similarity": 0.8182,
+        "shared_count": 9
+      },
+      {
+        "pair": "fold_3_vs_fold_4",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "fold_3_vs_fold_5",
+        "jaccard_similarity": 0.8182,
+        "shared_count": 9
+      },
+      {
+        "pair": "fold_4_vs_fold_5",
+        "jaccard_similarity": 0.8182,
+        "shared_count": 9
+      }
+    ],
+    "consensus_features_in_all_5_folds": [
+      "CholCheck",
+      "GenHlth",
+      "Age",
+      "HighChol",
+      "Sex",
+      "BMI",
+      "HeartDiseaseorAttack",
+      "HighBP",
+      "Income"
+    ],
+    "feature_frequencies_across_5_folds": {
+      "CholCheck": 5,
+      "GenHlth": 5,
+      "Age": 5,
+      "Sex": 5,
+      "HighBP": 5,
+      "BMI": 5,
+      "Income": 5,
+      "HvyAlcoholConsump": 4,
+      "HighChol": 5,
+      "MentHlth": 1,
+      "HeartDiseaseorAttack": 5
+    },
+    "fold_top10_features": {
+      "fold_1": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "fold_2": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "fold_3": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "fold_4": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "fold_5": [
+        "GenHlth",
+        "HighBP",
+        "Age",
+        "BMI",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "MentHlth"
+      ]
+    }
+  },
+  "seed_resampling_stability": {
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "sample_size_per_seed": 10000,
+    "mean_pairwise_jaccard": 1.0,
+    "min_pairwise_jaccard": 1.0,
+    "pairwise_comparisons": [
+      {
+        "pair": "seed_42_vs_seed_123",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "seed_42_vs_seed_999",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      },
+      {
+        "pair": "seed_123_vs_seed_999",
+        "jaccard_similarity": 1.0,
+        "shared_count": 10
+      }
+    ],
+    "consensus_features_in_all_3_seeds": [
+      "CholCheck",
+      "HvyAlcoholConsump",
+      "GenHlth",
+      "Age",
+      "HighChol",
+      "Sex",
+      "BMI",
+      "HeartDiseaseorAttack",
+      "HighBP",
+      "Income"
+    ],
+    "feature_frequencies_across_3_seeds": {
+      "CholCheck": 3,
+      "GenHlth": 3,
+      "Age": 3,
+      "Sex": 3,
+      "HighBP": 3,
+      "BMI": 3,
+      "Income": 3,
+      "HvyAlcoholConsump": 3,
+      "HighChol": 3,
+      "HeartDiseaseorAttack": 3
+    },
+    "seed_top10_features": {
+      "seed_42": [
+        "GenHlth",
+        "HighBP",
+        "Age",
+        "BMI",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "seed_123": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "seed_999": [
+        "GenHlth",
+        "HighBP",
+        "BMI",
+        "Age",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ]
+    },
+    "raw_sample_artifact": "raw_shap_sample_seed42.npz"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "experiment": "CONSOLIDATE",
+  "script": "python_analysis/revision_consolidate.py",
+  "script_sha256": "ee76acfc15bc5751643c5fae1d893cfe0d5ef87b75b4e6cf092dc2d7c4d1b356",
+  "command": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss\\.venv\\Scripts\\python.exe python_analysis/revision_consolidate.py",
+  "working_directory": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss",
+  "python_executable": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss\\.venv\\Scripts\\python.exe",
+  "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "git_commit": "69022a8a13ba72be3611dd3dc303ad24fc4265b4",
+  "raw_dataset_sha256": "19f367e3e3350768f0c144c5d73ee5b355f67a57eaaa86ca7bd8aec594d8b1d0",
+  "start_time_utc": "2026-10-27T18:44:02Z",
+  "end_time_utc": "2026-10-27T18:44:07Z",
+  "duration_seconds": 5.43,
+  "exit_code": 0,
+  "stdout_log": "CONSOLIDATE.stdout.log",
+  "stderr_log": "CONSOLIDATE.stderr.log",
+  "execution_bound_output_hashes": {
+    "results/revision_part1/CODEX_INDEPENDENT_REAUDIT_FINAL.md": "8f323c575ce4475d568ecd8f4ca9a865061f10fd98c522f5a276d2f38cfc5cad",
+    "results/revision_part1/CODEX_INDEPENDENT_SCIENTIFIC_AUDIT.md": "b4d40c0f92cabcbc57e4afbe00dbb27629831c1f68b63de39242664647a10e75",
+    "results/revision_part1/consolidated_results.json": "24475a8cf1d424754fc32a7d900daff19449e9b60fcdb34fffa764639d6ccc9c",
+    "results/revision_part1/experiment_manifest.json": "397a1a13af89c572740723843c85b5f8fe664932e425eb1f11bd9052adefe372",
+    "results/revision_part1/experiment_summary.md": "c7c186df1e7ca48473c3f9dc5ba42a55dbecaa790206e2fdf433b4761ac508cb",
+    "results/revision_part1/FINAL_CORRECTION_AUDIT.md": "e2dbe7f97763cb64ac93351e38cfb981027a7ac8f685433bdcc7af4d16e569ce",
+    "results/revision_part1/FINAL_PHASE1_AUDIT.md": "115474cdd62a78c2bd36b445fd4dcc47695985f4014325c080c349d1d991e580",
+    "results/revision_part1/output_artifact_manifest.json": "69216830b0f050faf66a45a004a6968d9255904eef7efcdb36b5d2b6c9b1b835",
+    "results/revision_part1/PHASE1_REMEDIATION_REPORT.md": "05e291147c7757556bf0a3b18ea32bfed5a70b601f1ef3bad3eed02b081ad066",
+    "results/revision_part1/protected_hashes_before.json": "b6a4d7e382f1b75ed3640cad4cea2cd2f634bbaf561585f88cfc8aba20943d8e",
+    "results/revision_part1/STRICT_AUDIT.md": "b844e73a55a29e75a4907920c7b41dbd63645bd6aaa3e7280dddc12605646ecf"
+  },
+  "status": "PASS"
+}

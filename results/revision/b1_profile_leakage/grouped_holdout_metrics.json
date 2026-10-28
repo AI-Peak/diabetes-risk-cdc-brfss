@@ -1,0 +1,39 @@
+{
+  "Accuracy": 0.708,
+  "Precision": 0.2974,
+  "Recall": 0.8037,
+  "Specificity": 0.6926,
+  "F1-score": 0.4341,
+  "ROC-AUC": 0.8279,
+  "PR-AUC": 0.4321,
+  "TP": 5682,
+  "FP": 13425,
+  "TN": 30242,
+  "FN": 1388,
+  "selected_model": "XGBoost",
+  "selected_threshold": 0.13,
+  "sample_size": 50737,
+  "positive_prevalence": 0.1393,
+  "bootstrap_95_ci": {
+    "PR-AUC": [
+      0.4213,
+      0.4436
+    ],
+    "ROC-AUC": [
+      0.8231,
+      0.8326
+    ],
+    "Recall": [
+      0.7948,
+      0.8126
+    ],
+    "Precision": [
+      0.2935,
+      0.301
+    ],
+    "F1-score": [
+      0.4289,
+      0.439
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "evaluation_split": "Untouched holdout test (N=50,736)",
+  "population_prevalence": 0.1393,
+  "evaluated_threshold_range": [
+    0.05,
+    0.4
+  ],
+  "selected_operating_threshold": 0.13,
+  "metrics_at_selected_threshold": {
+    "threshold": 0.13,
+    "tp": 5725,
+    "fp": 13416,
+    "tn": 30251,
+    "fn": 1344,
+    "net_benefit_model": 0.07333,
+    "net_benefit_all": 0.01072,
+    "net_benefit_none": 0.0
+  },
+  "net_benefit_superiority_range": {
+    "over_screen_all": "pt in [0.05, 0.40] (strictly dominates across entire evaluated grid)",
+    "over_screen_none": "pt in [0.05, 0.40] (strictly positive net benefit)"
+  }
+}

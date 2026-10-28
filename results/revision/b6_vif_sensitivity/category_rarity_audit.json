@@ -1,0 +1,110 @@
+{
+  "rarity_criterion": {
+    "description": "Category is defined as rare/sparse if count < 1,000 rows or percentage < 0.5% of total N (253,680)",
+    "count_threshold": 1000,
+    "pct_threshold": 0.5
+  },
+  "education_categories": [
+    {
+      "level": 1,
+      "count": 174,
+      "pct_of_total": 0.0686,
+      "is_rare": true,
+      "action": "Merged into Level 2"
+    },
+    {
+      "level": 2,
+      "count": 4043,
+      "pct_of_total": 1.5937,
+      "is_rare": false,
+      "action": "Kept as distinct category"
+    },
+    {
+      "level": 3,
+      "count": 9478,
+      "pct_of_total": 3.7362,
+      "is_rare": false,
+      "action": "Kept as distinct category"
+    },
+    {
+      "level": 4,
+      "count": 62750,
+      "pct_of_total": 24.7359,
+      "is_rare": false,
+      "action": "Kept as distinct category"
+    },
+    {
+      "level": 5,
+      "count": 69910,
+      "pct_of_total": 27.5583,
+      "is_rare": false,
+      "action": "Kept as distinct category"
+    },
+    {
+      "level": 6,
+      "count": 107325,
+      "pct_of_total": 42.3072,
+      "is_rare": false,
+      "action": "Modal Reference"
+    }
+  ],
+  "income_categories": [
+    {
+      "level": 1,
+      "count": 9811,
+      "pct_of_total": 3.8675,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 2,
+      "count": 11783,
+      "pct_of_total": 4.6448,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 3,
+      "count": 15994,
+      "pct_of_total": 6.3048,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 4,
+      "count": 20135,
+      "pct_of_total": 7.9372,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 5,
+      "count": 25883,
+      "pct_of_total": 10.203,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 6,
+      "count": 36470,
+      "pct_of_total": 14.3764,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 7,
+      "count": 43219,
+      "pct_of_total": 17.0368,
+      "is_rare": false,
+      "action": "Kept as distinct category (not rare; N >= 9,811)"
+    },
+    {
+      "level": 8,
+      "count": 90385,
+      "pct_of_total": 35.6295,
+      "is_rare": false,
+      "action": "Modal Reference ($75,000+)"
+    }
+  ],
+  "conclusion": "Education Level 1 (N=174, 0.069%) is the ONLY category in either variable meeting the sparsity threshold. Income Level 1 (N=9,811, 3.87%) and Level 2 (N=11,783, 4.64%) contain substantial sample sizes (>9,000 observations each), confirming that category merging is statistically unjustified for Income. Using modal Level 8 ($75k+, N=90,385, 35.63%) as reference provides complete multicollinearity resolution without loss of granular socio-economic resolution."
+}

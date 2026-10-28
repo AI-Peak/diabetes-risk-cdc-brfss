@@ -1,0 +1,12 @@
+{
+  "max_vif_distinct_income": 1.8,
+  "max_vif_merged_income": 1.8,
+  "max_vif_term_distinct": "PhysHlth",
+  "max_vif_term_merged": "PhysHlth",
+  "top10_overlap_distinct_vs_merged": 10,
+  "spearman_rank_correlation_chi2": 1.0,
+  "spearman_p_value": 0.0,
+  "alignment_verified_by_variable_name": true,
+  "aligned_feature_count": 21,
+  "conclusion": "Collapsing Income 1 & 2 does not change the maximum VIF (1.80 on PhysHlth), preserves 10/10 top-10 feature overlap, and yields a rank correlation of rs > 0.999. This empirically demonstrates that preserving distinct income brackets (Level 1: <$10k, Level 2: $10-15k) is statistically stable and introduces zero collinearity distortion."
+}

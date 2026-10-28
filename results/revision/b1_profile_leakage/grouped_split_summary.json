@@ -1,0 +1,16 @@
+{
+  "split_protocol": "profile_grouped_split",
+  "algorithm": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)",
+  "random_state": 42,
+  "dev_size": 202943,
+  "dev_pct": 79.9996,
+  "dev_pos_count": 28276,
+  "dev_prevalence": 0.1393,
+  "dev_unique_groups": 182337,
+  "holdout_size": 50737,
+  "holdout_pct": 20.0004,
+  "holdout_pos_count": 7070,
+  "holdout_prevalence": 0.1393,
+  "holdout_unique_groups": 45571,
+  "shared_profile_groups": 0
+}

@@ -1,0 +1,937 @@
+{
+  "metadata": {
+    "generated_utc": "2026-10-27T18:44:07Z",
+    "git_commit": "69022a8a13ba72be3611dd3dc303ad24fc4265b4"
+  },
+  "baseline_manuscript_reference": {
+    "split": "Stratified 80/20 (Dev N=202,944; Holdout N=50,736)",
+    "selected_model": "XGBoost",
+    "cv_pr_auc": 0.4359,
+    "holdout_pr_auc": 0.4238,
+    "holdout_roc_auc": 0.8272,
+    "selected_threshold": 0.13,
+    "holdout_recall": 0.8099,
+    "holdout_precision": 0.2991,
+    "holdout_f1": 0.4369,
+    "brier_score": 0.0974,
+    "calibration_slope": 0.9589,
+    "calibration_intercept": -0.0515,
+    "max_vif": 357.58,
+    "shap_lr_top10_overlap": "10/10",
+    "shap_lr_spearman": 0.9338
+  },
+  "b1_duplicate_profile_leakage": {
+    "duplicate_audit": {
+      "total_records": 253680,
+      "n_features": 21,
+      "exact_row_duplicates": {
+        "surplus_rows": 24206,
+        "pct_of_dataset": 9.5419,
+        "rows_in_duplicate_groups": 35575
+      },
+      "repeated_predictor_profiles": {
+        "unique_profiles": 227908,
+        "surplus_rows": 25772,
+        "pct_of_dataset": 10.1593,
+        "rows_in_repeated_groups": 38000
+      },
+      "conflicting_label_profiles": {
+        "n_profiles": 1566,
+        "n_observations": 5218,
+        "pct_of_dataset": 2.0569
+      }
+    },
+    "original_split_overlap": {
+      "split_protocol": "original_stratified_split",
+      "random_state": 42,
+      "dev_size": 202944,
+      "holdout_size": 50736,
+      "overlapping_holdout_rows": 6836,
+      "overlapping_holdout_pct": 13.4737,
+      "non_overlapping_holdout_rows": 43900,
+      "non_overlapping_holdout_pct": 86.5263,
+      "mutually_exclusive_breakdown": {
+        "no_matching_profile_in_dev": 43900,
+        "same_label_matches_only": 5965,
+        "different_label_matches_only": 461,
+        "both_same_and_different_matches": 410,
+        "sum_check": 50736
+      },
+      "class_distributions": {
+        "full_holdout": {
+          "n": 50736,
+          "pos_count": 7069,
+          "prevalence": 0.1393
+        },
+        "overlapping_subset": {
+          "n": 6836,
+          "pos_count": 360,
+          "prevalence": 0.0527
+        },
+        "non_overlapping_subset": {
+          "n": 43900,
+          "pos_count": 6709,
+          "prevalence": 0.1528
+        }
+      }
+    },
+    "non_overlap_holdout_metrics": {
+      "Accuracy": 0.6814,
+      "Precision": 0.3021,
+      "Recall": 0.8281,
+      "Specificity": 0.6549,
+      "F1-score": 0.4427,
+      "ROC-AUC": 0.818,
+      "PR-AUC": 0.4317,
+      "TP": 5556,
+      "FP": 12835,
+      "TN": 24356,
+      "FN": 1153,
+      "operating_threshold": 0.13,
+      "sample_size": 43900,
+      "positive_prevalence": 0.1528
+    },
+    "grouped_split_summary": {
+      "split_protocol": "profile_grouped_split",
+      "algorithm": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)",
+      "random_state": 42,
+      "dev_size": 202943,
+      "dev_pct": 79.9996,
+      "dev_pos_count": 28276,
+      "dev_prevalence": 0.1393,
+      "dev_unique_groups": 182337,
+      "holdout_size": 50737,
+      "holdout_pct": 20.0004,
+      "holdout_pos_count": 7070,
+      "holdout_prevalence": 0.1393,
+      "holdout_unique_groups": 45571,
+      "shared_profile_groups": 0
+    },
+    "grouped_cv_results": {
+      "Logistic Regression": {
+        "Mean_PR_AUC": 0.4148,
+        "Std_PR_AUC": 0.006,
+        "Mean_ROC_AUC": 0.8249,
+        "Std_ROC_AUC": 0.003,
+        "Folds": [
+          {
+            "fold": 1,
+            "PR-AUC": 0.4110527971912362,
+            "ROC-AUC": 0.8244484445773378
+          },
+          {
+            "fold": 2,
+            "PR-AUC": 0.41207900392430186,
+            "ROC-AUC": 0.8275697631056406
+          },
+          {
+            "fold": 3,
+            "PR-AUC": 0.42296677743872213,
+            "ROC-AUC": 0.8271577646455242
+          },
+          {
+            "fold": 4,
+            "PR-AUC": 0.40886966709376454,
+            "ROC-AUC": 0.8200441501975375
+          },
+          {
+            "fold": 5,
+            "PR-AUC": 0.4191215453282428,
+            "ROC-AUC": 0.8253711342285824
+          }
+        ]
+      },
+      "Decision Tree": {
+        "Mean_PR_AUC": 0.4033,
+        "Std_PR_AUC": 0.0065,
+        "Mean_ROC_AUC": 0.8165,
+        "Std_ROC_AUC": 0.003,
+        "Folds": [
+          {
+            "fold": 1,
+            "PR-AUC": 0.3998710303678015,
+            "ROC-AUC": 0.8153660455687135
+          },
+          {
+            "fold": 2,
+            "PR-AUC": 0.39980359715828123,
+            "ROC-AUC": 0.8184263623656725
+          },
+          {
+            "fold": 3,
+            "PR-AUC": 0.41179401283658545,
+            "ROC-AUC": 0.8179955802238685
+          },
+          {
+            "fold": 4,
+            "PR-AUC": 0.39646178078946603,
+            "ROC-AUC": 0.8117771184718059
+          },
+          {
+            "fold": 5,
+            "PR-AUC": 0.4086376786589128,
+            "ROC-AUC": 0.8191285184221415
+          }
+        ]
+      },
+      "Random Forest": {
+        "Mean_PR_AUC": 0.4291,
+        "Std_PR_AUC": 0.0064,
+        "Mean_ROC_AUC": 0.8272,
+        "Std_ROC_AUC": 0.0028,
+        "Folds": [
+          {
+            "fold": 1,
+            "PR-AUC": 0.42353162000384725,
+            "ROC-AUC": 0.8266411002037592
+          },
+          {
+            "fold": 2,
+            "PR-AUC": 0.4240670301447373,
+            "ROC-AUC": 0.8292000446262769
+          },
+          {
+            "fold": 3,
+            "PR-AUC": 0.43807936198831643,
+            "ROC-AUC": 0.8299171259583561
+          },
+          {
+            "fold": 4,
+            "PR-AUC": 0.4265127543850265,
+            "ROC-AUC": 0.8226515666987427
+          },
+          {
+            "fold": 5,
+            "PR-AUC": 0.43332412827853256,
+            "ROC-AUC": 0.8273943909248734
+          }
+        ]
+      },
+      "XGBoost": {
+        "Mean_PR_AUC": 0.4344,
+        "Std_PR_AUC": 0.0061,
+        "Mean_ROC_AUC": 0.8304,
+        "Std_ROC_AUC": 0.0027,
+        "Folds": [
+          {
+            "fold": 1,
+            "PR-AUC": 0.42977501051829275,
+            "ROC-AUC": 0.8303921852990738
+          },
+          {
+            "fold": 2,
+            "PR-AUC": 0.431585264897261,
+            "ROC-AUC": 0.8319708094743975
+          },
+          {
+            "fold": 3,
+            "PR-AUC": 0.44397493441593544,
+            "ROC-AUC": 0.8323603790177284
+          },
+          {
+            "fold": 4,
+            "PR-AUC": 0.4298336445523786,
+            "ROC-AUC": 0.8257966627184747
+          },
+          {
+            "fold": 5,
+            "PR-AUC": 0.4369579611935452,
+            "ROC-AUC": 0.8314357308418847
+          }
+        ]
+      }
+    },
+    "grouped_holdout_metrics": {
+      "Accuracy": 0.708,
+      "Precision": 0.2974,
+      "Recall": 0.8037,
+      "Specificity": 0.6926,
+      "F1-score": 0.4341,
+      "ROC-AUC": 0.8279,
+      "PR-AUC": 0.4321,
+      "TP": 5682,
+      "FP": 13425,
+      "TN": 30242,
+      "FN": 1388,
+      "selected_model": "XGBoost",
+      "selected_threshold": 0.13,
+      "sample_size": 50737,
+      "positive_prevalence": 0.1393,
+      "bootstrap_95_ci": {
+        "PR-AUC": [
+          0.4213,
+          0.4436
+        ],
+        "ROC-AUC": [
+          0.8231,
+          0.8326
+        ],
+        "Recall": [
+          0.7948,
+          0.8126
+        ],
+        "Precision": [
+          0.2935,
+          0.301
+        ],
+        "F1-score": [
+          0.4289,
+          0.439
+        ]
+      }
+    }
+  },
+  "b2_hyperparameter_tuning": {
+    "evaluation_protocol": "Repeated Nested CV (5 folds x 3 repeats = 15 iterations)",
+    "inner_tuning_protocol": "3-fold stratified CV on 40,000 stratified subsample per outer training fold, refit on full outer training partition (~162k rows)",
+    "dataset_split": "Development Set ONLY (N=202,944)",
+    "holdout_used": false,
+    "models_compared": [
+      "Tuned XGBoost",
+      "Tuned Random Forest"
+    ],
+    "metric": "PR-AUC (Average Precision)",
+    "xgb_tuned_pr_auc": {
+      "mean": 0.4338,
+      "std": 0.0066,
+      "baseline_untuned_cv": 0.4359
+    },
+    "rf_tuned_pr_auc": {
+      "mean": 0.427,
+      "std": 0.0073,
+      "baseline_untuned_cv": 0.4301
+    },
+    "paired_difference": {
+      "mean_diff_xgb_minus_rf": 0.0068,
+      "std_diff": 0.0036,
+      "descriptive_95_ci": [
+        0.0048,
+        0.0087
+      ],
+      "nadeau_bengio_corrected_95_ci": [
+        0.0025,
+        0.0111
+      ],
+      "corrected_t_statistic": 3.3656,
+      "corrected_p_value": 0.0046
+    },
+    "hyperparameter_selection_frequencies": {
+      "xgboost": {
+        "{'max_depth': 3, 'learning_rate': 0.1}": 15
+      },
+      "random_forest": {
+        "{'max_depth': 8, 'min_samples_leaf': 5}": 8,
+        "{'max_depth': 12, 'min_samples_leaf': 5}": 5,
+        "{'max_depth': 8, 'min_samples_leaf': 1}": 2
+      }
+    },
+    "pairwise_comparison_summary": {
+      "total_evaluations": 15,
+      "xgb_wins": 14,
+      "rf_wins": 1,
+      "ties": 0,
+      "xgb_win_rate_percentage": 93.33,
+      "iteration_14_details": {
+        "iteration": 14,
+        "repeat": 3,
+        "fold": 4,
+        "xgb_pr_auc": 0.4366,
+        "rf_pr_auc": 0.4368,
+        "difference": -0.0003,
+        "winner": "Random Forest"
+      }
+    }
+  },
+  "b3_calibration_bootstrap": {
+    "evaluation_split": "Untouched holdout test (N=50,736)",
+    "model": "XGBoost (Baseline)",
+    "brier_score": 0.0974,
+    "brier_score_95_ci": [
+      0.0964,
+      0.0983
+    ],
+    "calibration_slope": 0.9589,
+    "calibration_slope_95_ci": [
+      0.9342,
+      0.9854
+    ],
+    "calibration_intercept": -0.0515,
+    "calibration_intercept_95_ci": [
+      -0.0861,
+      -0.0148
+    ],
+    "epsilon_logit_clip": 1e-15,
+    "bootstrap_metadata": {
+      "n_bootstraps": 1000,
+      "successful_replicates": 1000,
+      "failed_replicates": 0,
+      "sampling_method": "stratified_percentile",
+      "random_seed": 42,
+      "replicates_artifact": "bootstrap_replicates.csv"
+    },
+    "baseline_comparison": {
+      "manuscript_brier_score": 0.0974,
+      "manuscript_calibration_slope": 0.9589,
+      "manuscript_slope_95_ci": [
+        0.9342,
+        0.9854
+      ],
+      "manuscript_calibration_intercept": -0.0515,
+      "manuscript_intercept_95_ci": [
+        -0.0861,
+        -0.0148
+      ]
+    }
+  },
+  "b4_decision_curve_analysis": {
+    "evaluation_split": "Untouched holdout test (N=50,736)",
+    "population_prevalence": 0.1393,
+    "evaluated_threshold_range": [
+      0.05,
+      0.4
+    ],
+    "selected_operating_threshold": 0.13,
+    "metrics_at_selected_threshold": {
+      "threshold": 0.13,
+      "tp": 5725,
+      "fp": 13416,
+      "tn": 30251,
+      "fn": 1344,
+      "net_benefit_model": 0.07333,
+      "net_benefit_all": 0.01072,
+      "net_benefit_none": 0.0
+    },
+    "net_benefit_superiority_range": {
+      "over_screen_all": "pt in [0.05, 0.40] (strictly dominates across entire evaluated grid)",
+      "over_screen_none": "pt in [0.05, 0.40] (strictly positive net benefit)"
+    }
+  },
+  "b5_shap_ranking_stability": {
+    "fold_stability": {
+      "n_folds": 5,
+      "mean_pairwise_jaccard": 0.9273,
+      "min_pairwise_jaccard": 0.8182,
+      "pairwise_comparisons": [
+        {
+          "pair": "fold_1_vs_fold_2",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_1_vs_fold_3",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_1_vs_fold_4",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_1_vs_fold_5",
+          "jaccard_similarity": 0.8182,
+          "shared_count": 9
+        },
+        {
+          "pair": "fold_2_vs_fold_3",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_2_vs_fold_4",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_2_vs_fold_5",
+          "jaccard_similarity": 0.8182,
+          "shared_count": 9
+        },
+        {
+          "pair": "fold_3_vs_fold_4",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "fold_3_vs_fold_5",
+          "jaccard_similarity": 0.8182,
+          "shared_count": 9
+        },
+        {
+          "pair": "fold_4_vs_fold_5",
+          "jaccard_similarity": 0.8182,
+          "shared_count": 9
+        }
+      ],
+      "consensus_features_in_all_5_folds": [
+        "CholCheck",
+        "GenHlth",
+        "Age",
+        "HighChol",
+        "Sex",
+        "BMI",
+        "HeartDiseaseorAttack",
+        "HighBP",
+        "Income"
+      ],
+      "feature_frequencies_across_5_folds": {
+        "CholCheck": 5,
+        "GenHlth": 5,
+        "Age": 5,
+        "Sex": 5,
+        "HighBP": 5,
+        "BMI": 5,
+        "Income": 5,
+        "HvyAlcoholConsump": 4,
+        "HighChol": 5,
+        "MentHlth": 1,
+        "HeartDiseaseorAttack": 5
+      },
+      "fold_top10_features": {
+        "fold_1": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "fold_2": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "fold_3": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "fold_4": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "fold_5": [
+          "GenHlth",
+          "HighBP",
+          "Age",
+          "BMI",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "MentHlth"
+        ]
+      }
+    },
+    "seed_resampling_stability": {
+      "seeds": [
+        42,
+        123,
+        999
+      ],
+      "sample_size_per_seed": 10000,
+      "mean_pairwise_jaccard": 1.0,
+      "min_pairwise_jaccard": 1.0,
+      "pairwise_comparisons": [
+        {
+          "pair": "seed_42_vs_seed_123",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "seed_42_vs_seed_999",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        },
+        {
+          "pair": "seed_123_vs_seed_999",
+          "jaccard_similarity": 1.0,
+          "shared_count": 10
+        }
+      ],
+      "consensus_features_in_all_3_seeds": [
+        "CholCheck",
+        "HvyAlcoholConsump",
+        "GenHlth",
+        "Age",
+        "HighChol",
+        "Sex",
+        "BMI",
+        "HeartDiseaseorAttack",
+        "HighBP",
+        "Income"
+      ],
+      "feature_frequencies_across_3_seeds": {
+        "CholCheck": 3,
+        "GenHlth": 3,
+        "Age": 3,
+        "Sex": 3,
+        "HighBP": 3,
+        "BMI": 3,
+        "Income": 3,
+        "HvyAlcoholConsump": 3,
+        "HighChol": 3,
+        "HeartDiseaseorAttack": 3
+      },
+      "seed_top10_features": {
+        "seed_42": [
+          "GenHlth",
+          "HighBP",
+          "Age",
+          "BMI",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "seed_123": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ],
+        "seed_999": [
+          "GenHlth",
+          "HighBP",
+          "BMI",
+          "Age",
+          "HighChol",
+          "Income",
+          "Sex",
+          "CholCheck",
+          "HeartDiseaseorAttack",
+          "HvyAlcoholConsump"
+        ]
+      },
+      "raw_sample_artifact": "raw_shap_sample_seed42.npz"
+    }
+  },
+  "b6_rare_categories_vif": {
+    "ranking_comparison": {
+      "top10_shap": [
+        "GenHlth",
+        "HighBP",
+        "Age",
+        "BMI",
+        "HighChol",
+        "Income",
+        "Sex",
+        "CholCheck",
+        "HeartDiseaseorAttack",
+        "HvyAlcoholConsump"
+      ],
+      "top10_orig_lr": [
+        "GenHlth",
+        "BMI",
+        "Age",
+        "HighBP",
+        "HighChol",
+        "HvyAlcoholConsump",
+        "CholCheck",
+        "Sex",
+        "Income",
+        "HeartDiseaseorAttack"
+      ],
+      "top10_revised_lr": [
+        "GenHlth",
+        "BMI",
+        "Age",
+        "HighBP",
+        "HighChol",
+        "HvyAlcoholConsump",
+        "CholCheck",
+        "Sex",
+        "Income",
+        "HeartDiseaseorAttack"
+      ],
+      "top10_overlap_orig_vs_revised_lr": 10,
+      "top10_jaccard_orig_vs_revised_lr": 1.0,
+      "top10_overlap_revised_lr_vs_shap": 10,
+      "top10_jaccard_revised_lr_vs_shap": 1.0,
+      "spearman_correlation_21_features": 0.9338,
+      "spearman_p_value": 6.378436493263989e-10
+    },
+    "cholcheck": {
+      "variable": "CholCheck",
+      "description": "Had cholesterol check within past 5 years",
+      "coefficient": 1.2348,
+      "std_error": 0.0686,
+      "adjusted_odds_ratio": 3.4377,
+      "aor_95_ci": [
+        3.0055,
+        3.932
+      ],
+      "p_value": 1.5472759013257816e-72,
+      "vif": 1.03,
+      "epidemiological_interpretation": "The elevated adjusted odds ratio (AOR ~ 3.44) for CholCheck reflects healthcare engagement and diagnostic detection opportunity rather than a causal or biological etiology. In cross-sectional survey surveillance (BRFSS), asymptomatic metabolic disorders like diabetes are predominantly identified during clinical encounters where routine metabolic screening (such as lipid panels) is co-administered. Individuals who have not undergone cholesterol screening have substantially lower opportunities for diabetes detection."
+    },
+    "category_rarity_audit": {
+      "rarity_criterion": {
+        "description": "Category is defined as rare/sparse if count < 1,000 rows or percentage < 0.5% of total N (253,680)",
+        "count_threshold": 1000,
+        "pct_threshold": 0.5
+      },
+      "education_categories": [
+        {
+          "level": 1,
+          "count": 174,
+          "pct_of_total": 0.0686,
+          "is_rare": true,
+          "action": "Merged into Level 2"
+        },
+        {
+          "level": 2,
+          "count": 4043,
+          "pct_of_total": 1.5937,
+          "is_rare": false,
+          "action": "Kept as distinct category"
+        },
+        {
+          "level": 3,
+          "count": 9478,
+          "pct_of_total": 3.7362,
+          "is_rare": false,
+          "action": "Kept as distinct category"
+        },
+        {
+          "level": 4,
+          "count": 62750,
+          "pct_of_total": 24.7359,
+          "is_rare": false,
+          "action": "Kept as distinct category"
+        },
+        {
+          "level": 5,
+          "count": 69910,
+          "pct_of_total": 27.5583,
+          "is_rare": false,
+          "action": "Kept as distinct category"
+        },
+        {
+          "level": 6,
+          "count": 107325,
+          "pct_of_total": 42.3072,
+          "is_rare": false,
+          "action": "Modal Reference"
+        }
+      ],
+      "income_categories": [
+        {
+          "level": 1,
+          "count": 9811,
+          "pct_of_total": 3.8675,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 2,
+          "count": 11783,
+          "pct_of_total": 4.6448,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 3,
+          "count": 15994,
+          "pct_of_total": 6.3048,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 4,
+          "count": 20135,
+          "pct_of_total": 7.9372,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 5,
+          "count": 25883,
+          "pct_of_total": 10.203,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 6,
+          "count": 36470,
+          "pct_of_total": 14.3764,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 7,
+          "count": 43219,
+          "pct_of_total": 17.0368,
+          "is_rare": false,
+          "action": "Kept as distinct category (not rare; N >= 9,811)"
+        },
+        {
+          "level": 8,
+          "count": 90385,
+          "pct_of_total": 35.6295,
+          "is_rare": false,
+          "action": "Modal Reference ($75,000+)"
+        }
+      ],
+      "conclusion": "Education Level 1 (N=174, 0.069%) is the ONLY category in either variable meeting the sparsity threshold. Income Level 1 (N=9,811, 3.87%) and Level 2 (N=11,783, 4.64%) contain substantial sample sizes (>9,000 observations each), confirming that category merging is statistically unjustified for Income. Using modal Level 8 ($75k+, N=90,385, 35.63%) as reference provides complete multicollinearity resolution without loss of granular socio-economic resolution."
+    },
+    "income_sensitivity_comparison": {
+      "max_vif_distinct_income": 1.8,
+      "max_vif_merged_income": 1.8,
+      "max_vif_term_distinct": "PhysHlth",
+      "max_vif_term_merged": "PhysHlth",
+      "top10_overlap_distinct_vs_merged": 10,
+      "spearman_rank_correlation_chi2": 1.0,
+      "spearman_p_value": 0.0,
+      "alignment_verified_by_variable_name": true,
+      "aligned_feature_count": 21,
+      "conclusion": "Collapsing Income 1 & 2 does not change the maximum VIF (1.80 on PhysHlth), preserves 10/10 top-10 feature overlap, and yields a rank correlation of rs > 0.999. This empirically demonstrates that preserving distinct income brackets (Level 1: <$10k, Level 2: $10-15k) is statistically stable and introduces zero collinearity distortion."
+    }
+  },
+  "b7_threshold_sensitivity": {
+    "recall_ge_75": {
+      "target_recall_constraint": 0.75,
+      "selected_threshold": 0.16,
+      "dev_oof_metrics": {
+        "threshold": 0.16,
+        "recall": 0.7537574707359338,
+        "precision": 0.3261015911872705,
+        "f1": 0.45524739152258187,
+        "accuracy": 0.7486548013245033
+      },
+      "fold_thresholds": [
+        0.16,
+        0.16,
+        0.16,
+        0.16,
+        0.16
+      ],
+      "fold_threshold_mean": 0.16,
+      "fold_threshold_std": 0.0,
+      "fold_threshold_min": 0.16,
+      "fold_threshold_max": 0.16,
+      "holdout_test_metrics": {
+        "threshold": 0.16,
+        "accuracy": 0.7482,
+        "precision": 0.3252,
+        "recall": 0.7512,
+        "specificity": 0.7477,
+        "f1_score": 0.4539,
+        "tp": 5310,
+        "fp": 11018,
+        "tn": 32649,
+        "fn": 1759,
+        "constraint": "Recall >= 0.75",
+        "evaluation_split": "Untouched holdout test (N=50,736)"
+      }
+    },
+    "recall_ge_80": {
+      "target_recall_constraint": 0.8,
+      "selected_threshold": 0.13,
+      "dev_oof_metrics": {
+        "threshold": 0.13,
+        "recall": 0.8097393641475404,
+        "precision": 0.2999777279932922,
+        "f1": 0.43777603579144597,
+        "accuracy": 0.7102057710501419
+      },
+      "fold_thresholds": [
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13
+      ],
+      "fold_threshold_mean": 0.13,
+      "fold_threshold_std": 0.0,
+      "fold_threshold_min": 0.13,
+      "fold_threshold_max": 0.13,
+      "holdout_test_metrics": {
+        "threshold": 0.13,
+        "accuracy": 0.7091,
+        "precision": 0.2991,
+        "recall": 0.8099,
+        "specificity": 0.6928,
+        "f1_score": 0.4369,
+        "tp": 5725,
+        "fp": 13416,
+        "tn": 30251,
+        "fn": 1344,
+        "constraint": "Recall >= 0.80",
+        "evaluation_split": "Untouched holdout test (N=50,736)"
+      }
+    },
+    "recall_ge_85": {
+      "target_recall_constraint": 0.85,
+      "selected_threshold": 0.1,
+      "dev_oof_metrics": {
+        "threshold": 0.1,
+        "recall": 0.8653322488241327,
+        "precision": 0.27359534857717893,
+        "f1": 0.41574350958271034,
+        "accuracy": 0.6611183380637023
+      },
+      "fold_thresholds": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "fold_threshold_mean": 0.1,
+      "fold_threshold_std": 0.0,
+      "fold_threshold_min": 0.1,
+      "fold_threshold_max": 0.1,
+      "holdout_test_metrics": {
+        "threshold": 0.1,
+        "accuracy": 0.6582,
+        "precision": 0.2719,
+        "recall": 0.866,
+        "specificity": 0.6245,
+        "f1_score": 0.4138,
+        "tp": 6122,
+        "fp": 16395,
+        "tn": 27272,
+        "fn": 947,
+        "constraint": "Recall >= 0.85",
+        "evaluation_split": "Untouched holdout test (N=50,736)"
+      }
+    },
+    "fold_threshold_selection_protocol": "For each fold, threshold selected on the other four folds' OOF predictions and evaluated on the held-out fold; no in-sample training predictions used."
+  }
+}

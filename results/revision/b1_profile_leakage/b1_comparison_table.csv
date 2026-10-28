@@ -1,0 +1,4 @@
+Protocol,Evaluation_Set,Model,Threshold,PR-AUC,ROC-AUC,Recall,Precision,F1-score,Specificity,Accuracy
+Baseline (Original Random Split),"Full Holdout (N=50,736)",XGBoost,0.13,0.4238,0.8272,0.8099,0.2991,0.4369,0.6928,0.7091
+Sensitivity 1 (Profile Non-Overlap),"Non-Overlap Holdout (N=43,900)",XGBoost,0.13,0.4317,0.818,0.8281,0.3021,0.4427,0.6549,0.6814
+Sensitivity 2 (Grouped Split & Grouped CV),"Grouped Holdout (N=50,737)",XGBoost,0.13,0.4321,0.8279,0.8037,0.2974,0.4341,0.6926,0.708

@@ -1,0 +1,41 @@
+{
+  "evaluation_split": "Untouched holdout test (N=50,736)",
+  "model": "XGBoost (Baseline)",
+  "brier_score": 0.0974,
+  "brier_score_95_ci": [
+    0.0964,
+    0.0983
+  ],
+  "calibration_slope": 0.9589,
+  "calibration_slope_95_ci": [
+    0.9342,
+    0.9854
+  ],
+  "calibration_intercept": -0.0515,
+  "calibration_intercept_95_ci": [
+    -0.0861,
+    -0.0148
+  ],
+  "epsilon_logit_clip": 1e-15,
+  "bootstrap_metadata": {
+    "n_bootstraps": 1000,
+    "successful_replicates": 1000,
+    "failed_replicates": 0,
+    "sampling_method": "stratified_percentile",
+    "random_seed": 42,
+    "replicates_artifact": "bootstrap_replicates.csv"
+  },
+  "baseline_comparison": {
+    "manuscript_brier_score": 0.0974,
+    "manuscript_calibration_slope": 0.9589,
+    "manuscript_slope_95_ci": [
+      0.9342,
+      0.9854
+    ],
+    "manuscript_calibration_intercept": -0.0515,
+    "manuscript_intercept_95_ci": [
+      -0.0861,
+      -0.0148
+    ]
+  }
+}

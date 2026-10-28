@@ -1,0 +1,20 @@
+{
+  "total_records": 253680,
+  "n_features": 21,
+  "exact_row_duplicates": {
+    "surplus_rows": 24206,
+    "pct_of_dataset": 9.5419,
+    "rows_in_duplicate_groups": 35575
+  },
+  "repeated_predictor_profiles": {
+    "unique_profiles": 227908,
+    "surplus_rows": 25772,
+    "pct_of_dataset": 10.1593,
+    "rows_in_repeated_groups": 38000
+  },
+  "conflicting_label_profiles": {
+    "n_profiles": 1566,
+    "n_observations": 5218,
+    "pct_of_dataset": 2.0569
+  }
+}

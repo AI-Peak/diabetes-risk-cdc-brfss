@@ -1,0 +1,4 @@
+threshold,accuracy,precision,recall,specificity,f1_score,tp,fp,tn,fn,constraint,evaluation_split
+0.16,0.7482,0.3252,0.7512,0.7477,0.4539,5310,11018,32649,1759,Recall >= 0.75,"Untouched holdout test (N=50,736)"
+0.13,0.7091,0.2991,0.8099,0.6928,0.4369,5725,13416,30251,1344,Recall >= 0.80,"Untouched holdout test (N=50,736)"
+0.1,0.6582,0.2719,0.866,0.6245,0.4138,6122,16395,27272,947,Recall >= 0.85,"Untouched holdout test (N=50,736)"

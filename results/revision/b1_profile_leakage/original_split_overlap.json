@@ -1,0 +1,34 @@
+{
+  "split_protocol": "original_stratified_split",
+  "random_state": 42,
+  "dev_size": 202944,
+  "holdout_size": 50736,
+  "overlapping_holdout_rows": 6836,
+  "overlapping_holdout_pct": 13.4737,
+  "non_overlapping_holdout_rows": 43900,
+  "non_overlapping_holdout_pct": 86.5263,
+  "mutually_exclusive_breakdown": {
+    "no_matching_profile_in_dev": 43900,
+    "same_label_matches_only": 5965,
+    "different_label_matches_only": 461,
+    "both_same_and_different_matches": 410,
+    "sum_check": 50736
+  },
+  "class_distributions": {
+    "full_holdout": {
+      "n": 50736,
+      "pos_count": 7069,
+      "prevalence": 0.1393
+    },
+    "overlapping_subset": {
+      "n": 6836,
+      "pos_count": 360,
+      "prevalence": 0.0527
+    },
+    "non_overlapping_subset": {
+      "n": 43900,
+      "pos_count": 6709,
+      "prevalence": 0.1528
+    }
+  }
+}

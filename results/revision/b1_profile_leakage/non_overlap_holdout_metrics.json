@@ -1,0 +1,16 @@
+{
+  "Accuracy": 0.6814,
+  "Precision": 0.3021,
+  "Recall": 0.8281,
+  "Specificity": 0.6549,
+  "F1-score": 0.4427,
+  "ROC-AUC": 0.818,
+  "PR-AUC": 0.4317,
+  "TP": 5556,
+  "FP": 12835,
+  "TN": 24356,
+  "FN": 1153,
+  "operating_threshold": 0.13,
+  "sample_size": 43900,
+  "positive_prevalence": 0.1528
+}

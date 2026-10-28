@@ -1,0 +1,387 @@
+{
+  "manifest_schema_version": "1.0.0",
+  "evidence_type": "post_hoc_artifact_snapshot",
+  "created_at_utc": "2026-10-28T04:05:10.966879+00:00",
+  "provenance_qualification": "Recreated after deletion from 42 current B1-B7 artifacts. This is a new integrity snapshot, not a byte-for-byte restoration of the deleted manifest and not proof of historical execution-time output hashes. Original B1-B7 artifacts and execution records were not modified.",
+  "total_tracked_artifacts": 42,
+  "artifacts": [
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/b1_comparison_table.csv",
+      "sha256": "38ee599e1590cd521c11a06fc265ce16b1a878c06aa0225966d5ca0a25a504eb",
+      "file_size_bytes": 490,
+      "last_modified_utc": "2026-10-27T18:01:30.295435+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/b1_summary.md",
+      "sha256": "43f8dbd9e638fa4ce5a987e2b88b8866331f4be59db6780be58a66b0d105f49d",
+      "file_size_bytes": 3958,
+      "last_modified_utc": "2026-10-27T18:01:30.296433+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/duplicate_audit.json",
+      "sha256": "4fe18a734f876a7286e87cf4d4b74ffa54fd91e6b6c05f1027ad47e84e8fa76c",
+      "file_size_bytes": 482,
+      "last_modified_utc": "2026-10-27T17:52:36.247379+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/final_grouped_model.joblib",
+      "sha256": "c76401f95498ae72ec4ecc9800dc61513add3b00c6b992cdda89992c1cc5c65d",
+      "file_size_bytes": 471355,
+      "last_modified_utc": "2026-10-27T18:00:37.115953+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/grouped_cv_results.json",
+      "sha256": "2bd1b57afb6609910d66249cc5701c96355f6825dadfa6a45175526db30da08b",
+      "file_size_bytes": 2998,
+      "last_modified_utc": "2026-10-27T18:00:22.409638+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/grouped_holdout_metrics.json",
+      "sha256": "296c1e0d17b6ab508b88c1fb923f9597eff93618fc1c0c4a043f28ffc159389d",
+      "file_size_bytes": 649,
+      "last_modified_utc": "2026-10-27T18:01:30.289836+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/grouped_split_summary.json",
+      "sha256": "3c94c602b3b3a0a59a14991c96d03d0723b9e1b2a7b068c85f5e82d9a6745ab5",
+      "file_size_bytes": 471,
+      "last_modified_utc": "2026-10-27T17:54:10.396923+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/non_overlap_holdout_metrics.json",
+      "sha256": "3efb8cfb88d8ec0f0b36c798332f326da4321f8c779ca719a28cb093dce7167a",
+      "file_size_bytes": 315,
+      "last_modified_utc": "2026-10-27T17:52:47.109874+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B1",
+      "artifact_path": "results/revision_part1/b1_profile_leakage/original_split_overlap.json",
+      "sha256": "a10bb7a58412bee5e8522b265642d05dddab4034a4d5addb173ac2c45346e79c",
+      "file_size_bytes": 879,
+      "last_modified_utc": "2026-10-27T17:52:46.920024+00:00",
+      "execution_record": "results/revision_part1/logs/B1.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B2",
+      "artifact_path": "results/revision_part1/b2_tuning/b2_summary.md",
+      "sha256": "03ebc273fc8682cbcadfb4b1a23d21bc4eb16c9c31f8344fb57365e50532f2dd",
+      "file_size_bytes": 2760,
+      "last_modified_utc": "2026-10-27T18:20:52.597713+00:00",
+      "execution_record": "results/revision_part1/logs/B2.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B2",
+      "artifact_path": "results/revision_part1/b2_tuning/b2_tuning_summary.json",
+      "sha256": "a86bb896fedb8a12ea2e23582cb78989d0b9d14ab16f042a7083bde1ff53ef9c",
+      "file_size_bytes": 1680,
+      "last_modified_utc": "2026-10-27T18:20:52.596714+00:00",
+      "execution_record": "results/revision_part1/logs/B2.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B2",
+      "artifact_path": "results/revision_part1/b2_tuning/nested_cv_paired_results.csv",
+      "sha256": "e5bcf270d6052f67fd302e44909f10772f44d1fc925b24bec996def129169cd0",
+      "file_size_bytes": 2463,
+      "last_modified_utc": "2026-10-27T18:20:52.589733+00:00",
+      "execution_record": "results/revision_part1/logs/B2.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/b3_calibration/b3_summary.md",
+      "sha256": "df32942d7430cd0227922b4f0f19eed8d66da2f1efe2e7a4e372fc3c904e196a",
+      "file_size_bytes": 1736,
+      "last_modified_utc": "2026-10-27T18:03:28.998059+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/b3_calibration/bootstrap_replicates.csv",
+      "sha256": "9c84a760b32ebd85769c85356064becb77991b24d4facfeb96b3f353f04e1cb1",
+      "file_size_bytes": 64880,
+      "last_modified_utc": "2026-10-27T18:03:26.451579+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/b3_calibration/calibration_bins.csv",
+      "sha256": "b74a4e7d678ecad8505c79b3b84b36cf2ddb8ef5bc680ce31450bdd501c3a62e",
+      "file_size_bytes": 1185,
+      "last_modified_utc": "2026-10-27T18:01:49.107953+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/b3_calibration/calibration_plot_data.json",
+      "sha256": "b0879301c63ce7fff16609fc426cc59e1c158311dac11acb64fa152d20c88fc1",
+      "file_size_bytes": 5779,
+      "last_modified_utc": "2026-10-27T18:03:28.998059+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/b3_calibration/calibration_results.json",
+      "sha256": "6eaad47a01fea57288e80a418e4cf8bdd1e97124078c4a38ebfc7ea7434b94c7",
+      "file_size_bytes": 979,
+      "last_modified_utc": "2026-10-27T18:03:26.461033+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B4",
+      "artifact_path": "results/revision_part1/b4_decision_curve/b4_summary.md",
+      "sha256": "8d2d046f8340fbd367a10490889a14db380e9c8c1657ab0c410be93e8ec7e96c",
+      "file_size_bytes": 2409,
+      "last_modified_utc": "2026-10-27T18:09:23.068082+00:00",
+      "execution_record": "results/revision_part1/logs/B4.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B4",
+      "artifact_path": "results/revision_part1/b4_decision_curve/decision_curve_data.csv",
+      "sha256": "4628538a3556c156d0d46a5be4b26749c2fb695ce02a734b00496aee22e2be3d",
+      "file_size_bytes": 1788,
+      "last_modified_utc": "2026-10-27T18:09:21.836152+00:00",
+      "execution_record": "results/revision_part1/logs/B4.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B4",
+      "artifact_path": "results/revision_part1/b4_decision_curve/decision_curve_summary.json",
+      "sha256": "774fef3d1c530a88eb7b62ecac0644430d34630de2de2bb9cdcfa1fb3ad911cf",
+      "file_size_bytes": 653,
+      "last_modified_utc": "2026-10-27T18:09:23.067117+00:00",
+      "execution_record": "results/revision_part1/logs/B4.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B5",
+      "artifact_path": "results/revision_part1/b5_shap_stability/b5_summary.md",
+      "sha256": "82f1aedf47d21738267a6b2b11ffd64cc54365385024b0e2c01acf7799acf663",
+      "file_size_bytes": 2054,
+      "last_modified_utc": "2026-10-27T18:04:30.266985+00:00",
+      "execution_record": "results/revision_part1/logs/B5.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B5",
+      "artifact_path": "results/revision_part1/b5_shap_stability/fold_shap_importance.csv",
+      "sha256": "7e049065284d520a6de96a8158c4e3012a234cc8953ae0f4568785fe96368a7a",
+      "file_size_bytes": 2439,
+      "last_modified_utc": "2026-10-27T18:04:17.660744+00:00",
+      "execution_record": "results/revision_part1/logs/B5.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B5",
+      "artifact_path": "results/revision_part1/b5_shap_stability/raw_shap_sample_seed42.npz",
+      "sha256": "bab3e6d029170a4818cab8472678e36cd3a5098e0a383f5b05a17dcf42783ab0",
+      "file_size_bytes": 827201,
+      "last_modified_utc": "2026-10-27T18:04:22.774192+00:00",
+      "execution_record": "results/revision_part1/logs/B5.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B5",
+      "artifact_path": "results/revision_part1/b5_shap_stability/seed_shap_importance.csv",
+      "sha256": "27cba9807aa056c62dcb61a2bd5eb15da12eb4ffc884bca4cc974d67bc31fe75",
+      "file_size_bytes": 1577,
+      "last_modified_utc": "2026-10-27T18:04:30.262995+00:00",
+      "execution_record": "results/revision_part1/logs/B5.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B5",
+      "artifact_path": "results/revision_part1/b5_shap_stability/shap_stability_summary.json",
+      "sha256": "35c240f4bbcdb6130cc91f0eea7adf088a058022b06fec04ed097d49673ca163",
+      "file_size_bytes": 5057,
+      "last_modified_utc": "2026-10-27T18:04:30.264991+00:00",
+      "execution_record": "results/revision_part1/logs/B5.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/b6_summary.md",
+      "sha256": "3d42919f8761c208cb4995886011b92b3ca9821dc9d913e9372bdf8dbd0c9ed1",
+      "file_size_bytes": 3240,
+      "last_modified_utc": "2026-10-27T18:08:55.376128+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/category_rarity_audit.json",
+      "sha256": "e6f79c6ca75ca549e8ba98d5f8af7d2408fa9bf96c6861043753b3054eb6c1bc",
+      "file_size_bytes": 3117,
+      "last_modified_utc": "2026-10-27T18:04:51.019001+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/cholcheck_investigation.json",
+      "sha256": "2200b578f365ee3f5d193acbe87ee20b6025e00202f2f3477a4d520bb700fc02",
+      "file_size_bytes": 841,
+      "last_modified_utc": "2026-10-27T18:07:25.353880+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/education_distribution.csv",
+      "sha256": "24242d75c51c3f5c6db668c8fc3c41ace87509cc2fe837303c691337435c9c40",
+      "file_size_bytes": 365,
+      "last_modified_utc": "2026-10-27T18:04:51.012868+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/income_distribution.csv",
+      "sha256": "21c23d3e5b236064a2a8592e945cf8aab5dd0a762966ee3b136615ef97c37f7f",
+      "file_size_bytes": 462,
+      "last_modified_utc": "2026-10-27T18:04:51.012868+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/income_sensitivity_comparison.json",
+      "sha256": "3b1c9b7068e535d5310bebf8524978a29052d5bc2f4db1c1ddd41e63f5a68226",
+      "file_size_bytes": 698,
+      "last_modified_utc": "2026-10-27T18:08:55.372139+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/ranking_comparison_b6.json",
+      "sha256": "a08fa90da4836e7876cf295b8946845f1e9e46bc3e0e1003dc411c3b023aef21",
+      "file_size_bytes": 867,
+      "last_modified_utc": "2026-10-27T18:07:25.351885+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/revised_adjusted_feature_contributions.csv",
+      "sha256": "1f777b29ae9ec64c3a146f266545f9094c180b0b3b42cc3c64a2130ad967dd9d",
+      "file_size_bytes": 2330,
+      "last_modified_utc": "2026-10-27T18:07:25.328078+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B6",
+      "artifact_path": "results/revision_part1/b6_vif_sensitivity/revised_multivariable_associations.csv",
+      "sha256": "3f5bd3eb069862a8867820ca493a1c9b8e0eb3fe9319101b1f2e74ec24959665",
+      "file_size_bytes": 5699,
+      "last_modified_utc": "2026-10-27T18:06:46.328337+00:00",
+      "execution_record": "results/revision_part1/logs/B6.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B7",
+      "artifact_path": "results/revision_part1/b7_threshold_sensitivity/b7_summary.md",
+      "sha256": "c101bf110f222a4dc78fe077fecf811e5c563b3fee5fa00ae253f04dd30d7fd1",
+      "file_size_bytes": 2013,
+      "last_modified_utc": "2026-10-27T18:12:11.944429+00:00",
+      "execution_record": "results/revision_part1/logs/B7.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B7",
+      "artifact_path": "results/revision_part1/b7_threshold_sensitivity/fold_threshold_details.csv",
+      "sha256": "71af454e588200b66731851a3458863e961b9eb76d890be9dd74c41c7d510b59",
+      "file_size_bytes": 680,
+      "last_modified_utc": "2026-10-27T18:12:11.711817+00:00",
+      "execution_record": "results/revision_part1/logs/B7.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B7",
+      "artifact_path": "results/revision_part1/b7_threshold_sensitivity/holdout_threshold_comparison.csv",
+      "sha256": "1434b1d8f01f7e00c90d6ab2344bdeec1897029e84c48edb5153568b4229448e",
+      "file_size_bytes": 437,
+      "last_modified_utc": "2026-10-27T18:12:11.941436+00:00",
+      "execution_record": "results/revision_part1/logs/B7.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B7",
+      "artifact_path": "results/revision_part1/b7_threshold_sensitivity/threshold_sensitivity_summary.json",
+      "sha256": "b8744da40791a90b26e8dd2beedaba7b9b2875b62b6e2b212dfb041abb9361fa",
+      "file_size_bytes": 2941,
+      "last_modified_utc": "2026-10-27T18:12:11.943431+00:00",
+      "execution_record": "results/revision_part1/logs/B7.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/figures/b3_calibration_reliability_curve.pdf",
+      "sha256": "f59a3bd949648a011daf13e9abcd98bf90df55f5054eb9502628031c3c468f86",
+      "file_size_bytes": 27069,
+      "last_modified_utc": "2026-10-27T18:03:28.973026+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B3",
+      "artifact_path": "results/revision_part1/figures/b3_calibration_reliability_curve.png",
+      "sha256": "f1ecfd2092216686e276a4a9e252db38e0b163e063a12d3fcfe3f8efcac57429",
+      "file_size_bytes": 214822,
+      "last_modified_utc": "2026-10-27T18:03:28.022358+00:00",
+      "execution_record": "results/revision_part1/logs/B3.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B4",
+      "artifact_path": "results/revision_part1/figures/b4_decision_curve_analysis.pdf",
+      "sha256": "9219acb1575237729f71125e9d1ba4b5428bb155a5b8078536989316a47608ed",
+      "file_size_bytes": 30003,
+      "last_modified_utc": "2026-10-27T18:09:23.054120+00:00",
+      "execution_record": "results/revision_part1/logs/B4.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    },
+    {
+      "experiment": "B4",
+      "artifact_path": "results/revision_part1/figures/b4_decision_curve_analysis.png",
+      "sha256": "638c0e78ac8baa05f0e35d8a733362fc329ca71f93c219d197df0505b8be2a48",
+      "file_size_bytes": 194152,
+      "last_modified_utc": "2026-10-27T18:09:22.509276+00:00",
+      "execution_record": "results/revision_part1/logs/B4.execution.json",
+      "provenance_note": "Historical execution reference; this newly calculated hash is a post-hoc snapshot, not evidence of execution-time binding."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "evaluation_protocol": "Repeated Nested CV (5 folds x 3 repeats = 15 iterations)",
+  "inner_tuning_protocol": "3-fold stratified CV on 40,000 stratified subsample per outer training fold, refit on full outer training partition (~162k rows)",
+  "dataset_split": "Development Set ONLY (N=202,944)",
+  "holdout_used": false,
+  "models_compared": [
+    "Tuned XGBoost",
+    "Tuned Random Forest"
+  ],
+  "metric": "PR-AUC (Average Precision)",
+  "xgb_tuned_pr_auc": {
+    "mean": 0.4338,
+    "std": 0.0066,
+    "baseline_untuned_cv": 0.4359
+  },
+  "rf_tuned_pr_auc": {
+    "mean": 0.427,
+    "std": 0.0073,
+    "baseline_untuned_cv": 0.4301
+  },
+  "paired_difference": {
+    "mean_diff_xgb_minus_rf": 0.0068,
+    "std_diff": 0.0036,
+    "descriptive_95_ci": [
+      0.0048,
+      0.0087
+    ],
+    "nadeau_bengio_corrected_95_ci": [
+      0.0025,
+      0.0111
+    ],
+    "corrected_t_statistic": 3.3656,
+    "corrected_p_value": 0.0046
+  },
+  "hyperparameter_selection_frequencies": {
+    "xgboost": {
+      "{'max_depth': 3, 'learning_rate': 0.1}": 15
+    },
+    "random_forest": {
+      "{'max_depth': 8, 'min_samples_leaf': 5}": 8,
+      "{'max_depth': 12, 'min_samples_leaf': 5}": 5,
+      "{'max_depth': 8, 'min_samples_leaf': 1}": 2
+    }
+  },
+  "pairwise_comparison_summary": {
+    "total_evaluations": 15,
+    "xgb_wins": 14,
+    "rf_wins": 1,
+    "ties": 0,
+    "xgb_win_rate_percentage": 93.33,
+    "iteration_14_details": {
+      "iteration": 14,
+      "repeat": 3,
+      "fold": 4,
+      "xgb_pr_auc": 0.4366,
+      "rf_pr_auc": 0.4368,
+      "difference": -0.0003,
+      "winner": "Random Forest"
+    }
+  }
+}

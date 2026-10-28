@@ -1,0 +1,44 @@
+{
+  "top10_shap": [
+    "GenHlth",
+    "HighBP",
+    "Age",
+    "BMI",
+    "HighChol",
+    "Income",
+    "Sex",
+    "CholCheck",
+    "HeartDiseaseorAttack",
+    "HvyAlcoholConsump"
+  ],
+  "top10_orig_lr": [
+    "GenHlth",
+    "BMI",
+    "Age",
+    "HighBP",
+    "HighChol",
+    "HvyAlcoholConsump",
+    "CholCheck",
+    "Sex",
+    "Income",
+    "HeartDiseaseorAttack"
+  ],
+  "top10_revised_lr": [
+    "GenHlth",
+    "BMI",
+    "Age",
+    "HighBP",
+    "HighChol",
+    "HvyAlcoholConsump",
+    "CholCheck",
+    "Sex",
+    "Income",
+    "HeartDiseaseorAttack"
+  ],
+  "top10_overlap_orig_vs_revised_lr": 10,
+  "top10_jaccard_orig_vs_revised_lr": 1.0,
+  "top10_overlap_revised_lr_vs_shap": 10,
+  "top10_jaccard_revised_lr_vs_shap": 1.0,
+  "spearman_correlation_21_features": 0.9338,
+  "spearman_p_value": 6.378436493263989e-10
+}

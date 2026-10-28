@@ -1,0 +1,18 @@
+{
+  "experiment": "B1",
+  "script": "python_analysis/revision_b1_leakage.py",
+  "script_sha256": "19ea48fa1ce68cbf2a5cdf22ab3c96d95a346529f6564cafc50375d38029dd92",
+  "command": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss\\.venv\\Scripts\\python.exe python_analysis/revision_b1_leakage.py",
+  "working_directory": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss",
+  "python_executable": "C:\\Users\\Admin\\Desktop\\SU26-FPT\\DAP391M\\diabetes-risk-cdc-brfss\\.venv\\Scripts\\python.exe",
+  "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "git_commit": "69022a8a13ba72be3611dd3dc303ad24fc4265b4",
+  "raw_dataset_sha256": "19f367e3e3350768f0c144c5d73ee5b355f67a57eaaa86ca7bd8aec594d8b1d0",
+  "start_time_utc": "2026-10-27T17:52:30Z",
+  "end_time_utc": "2026-10-27T18:01:30Z",
+  "duration_seconds": 540.61,
+  "exit_code": 0,
+  "stdout_log": "B1.stdout.log",
+  "stderr_log": "B1.stderr.log",
+  "status": "PASS"
+}

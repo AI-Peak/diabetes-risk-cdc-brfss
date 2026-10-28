@@ -1,0 +1,223 @@
+{
+  "equal_frequency_deciles": [
+    {
+      "bin": 1,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0002,
+      "bin_upper": 0.0061,
+      "sample_count": 5074,
+      "positive_count": 17,
+      "mean_predicted_probability": 0.0032,
+      "observed_positive_fraction": 0.0034
+    },
+    {
+      "bin": 2,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0061,
+      "bin_upper": 0.0135,
+      "sample_count": 5073,
+      "positive_count": 48,
+      "mean_predicted_probability": 0.0095,
+      "observed_positive_fraction": 0.0095
+    },
+    {
+      "bin": 3,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0135,
+      "bin_upper": 0.0263,
+      "sample_count": 5074,
+      "positive_count": 109,
+      "mean_predicted_probability": 0.0194,
+      "observed_positive_fraction": 0.0215
+    },
+    {
+      "bin": 4,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0263,
+      "bin_upper": 0.0478,
+      "sample_count": 5073,
+      "positive_count": 204,
+      "mean_predicted_probability": 0.0365,
+      "observed_positive_fraction": 0.0402
+    },
+    {
+      "bin": 5,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0478,
+      "bin_upper": 0.0772,
+      "sample_count": 5074,
+      "positive_count": 292,
+      "mean_predicted_probability": 0.0618,
+      "observed_positive_fraction": 0.0575
+    },
+    {
+      "bin": 6,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.0772,
+      "bin_upper": 0.119,
+      "sample_count": 5074,
+      "positive_count": 525,
+      "mean_predicted_probability": 0.0973,
+      "observed_positive_fraction": 0.1035
+    },
+    {
+      "bin": 7,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.119,
+      "bin_upper": 0.1727,
+      "sample_count": 5073,
+      "positive_count": 760,
+      "mean_predicted_probability": 0.1448,
+      "observed_positive_fraction": 0.1498
+    },
+    {
+      "bin": 8,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.1727,
+      "bin_upper": 0.2553,
+      "sample_count": 5073,
+      "positive_count": 1076,
+      "mean_predicted_probability": 0.211,
+      "observed_positive_fraction": 0.2121
+    },
+    {
+      "bin": 9,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.2553,
+      "bin_upper": 0.3763,
+      "sample_count": 5074,
+      "positive_count": 1614,
+      "mean_predicted_probability": 0.3104,
+      "observed_positive_fraction": 0.3181
+    },
+    {
+      "bin": 10,
+      "bin_type": "equal_frequency_decile",
+      "bin_lower": 0.3763,
+      "bin_upper": 0.882,
+      "sample_count": 5074,
+      "positive_count": 2424,
+      "mean_predicted_probability": 0.4984,
+      "observed_positive_fraction": 0.4777
+    }
+  ],
+  "equal_width_bins": [
+    {
+      "bin": 1,
+      "bin_type": "equal_width",
+      "bin_lower": 0.0,
+      "bin_upper": 0.1,
+      "sample_count": 28219,
+      "positive_count": 947,
+      "mean_predicted_probability": 0.0323,
+      "observed_positive_fraction": 0.0336
+    },
+    {
+      "bin": 2,
+      "bin_type": "equal_width",
+      "bin_lower": 0.1,
+      "bin_upper": 0.2,
+      "sample_count": 9243,
+      "positive_count": 1382,
+      "mean_predicted_probability": 0.1448,
+      "observed_positive_fraction": 0.1495
+    },
+    {
+      "bin": 3,
+      "bin_type": "equal_width",
+      "bin_lower": 0.2,
+      "bin_upper": 0.3,
+      "sample_count": 5309,
+      "positive_count": 1342,
+      "mean_predicted_probability": 0.2473,
+      "observed_positive_fraction": 0.2528
+    },
+    {
+      "bin": 4,
+      "bin_type": "equal_width",
+      "bin_lower": 0.3,
+      "bin_upper": 0.4,
+      "sample_count": 3578,
+      "positive_count": 1244,
+      "mean_predicted_probability": 0.3457,
+      "observed_positive_fraction": 0.3477
+    },
+    {
+      "bin": 5,
+      "bin_type": "equal_width",
+      "bin_lower": 0.4,
+      "bin_upper": 0.5,
+      "sample_count": 2293,
+      "positive_count": 985,
+      "mean_predicted_probability": 0.4463,
+      "observed_positive_fraction": 0.4296
+    },
+    {
+      "bin": 6,
+      "bin_type": "equal_width",
+      "bin_lower": 0.5,
+      "bin_upper": 0.6,
+      "sample_count": 1281,
+      "positive_count": 652,
+      "mean_predicted_probability": 0.5446,
+      "observed_positive_fraction": 0.509
+    },
+    {
+      "bin": 7,
+      "bin_type": "equal_width",
+      "bin_lower": 0.6,
+      "bin_upper": 0.7,
+      "sample_count": 616,
+      "positive_count": 381,
+      "mean_predicted_probability": 0.6419,
+      "observed_positive_fraction": 0.6185
+    },
+    {
+      "bin": 8,
+      "bin_type": "equal_width",
+      "bin_lower": 0.7,
+      "bin_upper": 0.8,
+      "sample_count": 181,
+      "positive_count": 123,
+      "mean_predicted_probability": 0.735,
+      "observed_positive_fraction": 0.6796
+    },
+    {
+      "bin": 9,
+      "bin_type": "equal_width",
+      "bin_lower": 0.8,
+      "bin_upper": 0.9,
+      "sample_count": 16,
+      "positive_count": 13,
+      "mean_predicted_probability": 0.8335,
+      "observed_positive_fraction": 0.8125
+    },
+    {
+      "bin": 10,
+      "bin_type": "equal_width",
+      "bin_lower": 0.9,
+      "bin_upper": 1.0,
+      "sample_count": 0,
+      "positive_count": 0,
+      "mean_predicted_probability": null,
+      "observed_positive_fraction": null
+    }
+  ],
+  "metrics": {
+    "brier_score": 0.0974,
+    "brier_ci": [
+      0.0964,
+      0.0983
+    ],
+    "slope": 0.9589,
+    "slope_ci": [
+      0.9342,
+      0.9854
+    ],
+    "intercept": -0.0515,
+    "intercept_ci": [
+      -0.0861,
+      -0.0148
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "variable": "CholCheck",
+  "description": "Had cholesterol check within past 5 years",
+  "coefficient": 1.2348,
+  "std_error": 0.0686,
+  "adjusted_odds_ratio": 3.4377,
+  "aor_95_ci": [
+    3.0055,
+    3.932
+  ],
+  "p_value": 1.5472759013257816e-72,
+  "vif": 1.03,
+  "epidemiological_interpretation": "The elevated adjusted odds ratio (AOR ~ 3.44) for CholCheck reflects healthcare engagement and diagnostic detection opportunity rather than a causal or biological etiology. In cross-sectional survey surveillance (BRFSS), asymptomatic metabolic disorders like diabetes are predominantly identified during clinical encounters where routine metabolic screening (such as lipid panels) is co-administered. Individuals who have not undergone cholesterol screening have substantially lower opportunities for diabetes detection."
+}
