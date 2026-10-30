@@ -520,11 +520,12 @@ To ensure statistical rigor, we apply:
         t_p_str = f"{row['t p-value']:.2e}" if row['t p-value'] > 0 else "< 1.00e-300"
         mwu_p_str = f"{row['MWU p-value']:.2e}" if row['MWU p-value'] > 0 else "< 1.00e-300"
         holm_p_str = f"{row['Holm_p_value']:.2e}" if row['Holm_p_value'] > 0 else "< 1.00e-300"
+        cohens_d = row["Cohen's d"]
         markdown_content += (
             f"| `{row['Variable']}` | {row['No Reported Diabetes Mean']:.2f} | {row['Prediabetes/Diabetes Positive Mean']:.2f} | "
             f"{row['Mean Difference']:.2f} | {row['No Reported Diabetes Median']:.1f} | {row['Prediabetes/Diabetes Positive Median']:.1f} | "
             f"{row['t-Statistic']:.2f} | `{t_p_str}` | `{mwu_p_str}` | `{holm_p_str}` | "
-            f"{'Yes' if row['Reject_Holm'] else 'No'} | {row['Cohen\'s d']:.4f} | "
+            f"{'Yes' if row['Reject_Holm'] else 'No'} | {cohens_d:.4f} | "
             f"{row['Effect_Size']:.4f} | **{row['Effect Size Interpretation']}** |\n"
         )
         
