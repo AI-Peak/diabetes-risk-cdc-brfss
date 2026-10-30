@@ -25,7 +25,16 @@ import time
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-LOGS_DIR = PROJECT_ROOT / "results" / "revision_part1" / "logs"
+_output_dir_env = os.environ.get("DAP_REVISION_OUTPUT_DIR")
+if _output_dir_env is not None and not _output_dir_env.strip():
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not be empty or whitespace-only.")
+REVISION_OUTPUT_DIR = Path(_output_dir_env or str(PROJECT_ROOT / "results" / "revision_generated")).resolve()
+PUBLISHED_REVISION_DIR = (PROJECT_ROOT / "results" / "revision").resolve()
+if REVISION_OUTPUT_DIR == PUBLISHED_REVISION_DIR or PUBLISHED_REVISION_DIR in REVISION_OUTPUT_DIR.parents:
+    raise ValueError(
+        "DAP_REVISION_OUTPUT_DIR must not point to or be inside the published results/revision directory."
+    )
+LOGS_DIR = REVISION_OUTPUT_DIR / "logs"
 RAW_DATA_PATH = PROJECT_ROOT / "data" / "raw" / "diabetes_binary_health_indicators_BRFSS2015.csv"
 
 SCRIPT_MAP = {
@@ -40,14 +49,14 @@ SCRIPT_MAP = {
 }
 
 EXP_OUTPUT_MAP = {
-    "B1": "results/revision_part1/b1_profile_leakage",
-    "B2": "results/revision_part1/b2_tuning",
-    "B3": "results/revision_part1/b3_calibration",
-    "B4": "results/revision_part1/b4_decision_curve",
-    "B5": "results/revision_part1/b5_shap_stability",
-    "B6": "results/revision_part1/b6_vif_sensitivity",
-    "B7": "results/revision_part1/b7_threshold_sensitivity",
-    "CONSOLIDATE": "results/revision_part1"
+    "B1": str(REVISION_OUTPUT_DIR / "b1_profile_leakage"),
+    "B2": str(REVISION_OUTPUT_DIR / "b2_tuning"),
+    "B3": str(REVISION_OUTPUT_DIR / "b3_calibration"),
+    "B4": str(REVISION_OUTPUT_DIR / "b4_decision_curve"),
+    "B5": str(REVISION_OUTPUT_DIR / "b5_shap_stability"),
+    "B6": str(REVISION_OUTPUT_DIR / "b6_vif_sensitivity"),
+    "B7": str(REVISION_OUTPUT_DIR / "b7_threshold_sensitivity"),
+    "CONSOLIDATE": str(REVISION_OUTPUT_DIR)
 }
 
 def compute_sha256(filepath: Path) -> str:
@@ -91,7 +100,8 @@ def run_logged_experiment(exp_name: str) -> int:
         cmd,
         cwd=str(PROJECT_ROOT),
         capture_output=True,
-        text=True
+        text=True,
+        env={**os.environ, "DAP_REVISION_OUTPUT_DIR": str(REVISION_OUTPUT_DIR)}
     )
 
     t1 = time.time()

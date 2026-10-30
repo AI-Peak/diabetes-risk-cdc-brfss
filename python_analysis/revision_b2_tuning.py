@@ -25,7 +25,13 @@ from xgboost import XGBClassifier
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = PROJECT_ROOT / "data" / "processed" / "diabetes_cleaned.csv"
-OUTPUT_DIR = PROJECT_ROOT / "results" / "revision_part1" / "b2_tuning"
+_output_dir_env = os.environ.get("DAP_REVISION_OUTPUT_DIR")
+if _output_dir_env is not None and not _output_dir_env.strip():
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not be empty or whitespace-only.")
+OUTPUT_ROOT = Path(_output_dir_env or str(PROJECT_ROOT / "results" / "revision_generated")).resolve()
+if OUTPUT_ROOT == (PROJECT_ROOT / "results" / "revision").resolve() or (PROJECT_ROOT / "results" / "revision").resolve() in OUTPUT_ROOT.parents:
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not point to or be inside results/revision.")
+OUTPUT_DIR = OUTPUT_ROOT / "b2_tuning"
 
 XGB_PARAM_GRID = [
     {"max_depth": d, "learning_rate": lr}

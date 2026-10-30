@@ -25,8 +25,14 @@ import joblib
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = PROJECT_ROOT / "data" / "processed" / "diabetes_cleaned.csv"
-OUTPUT_DIR = PROJECT_ROOT / "results" / "revision_part1" / "b3_calibration"
-FIGURES_DIR = PROJECT_ROOT / "results" / "revision_part1" / "figures"
+_output_dir_env = os.environ.get("DAP_REVISION_OUTPUT_DIR")
+if _output_dir_env is not None and not _output_dir_env.strip():
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not be empty or whitespace-only.")
+OUTPUT_ROOT = Path(_output_dir_env or str(PROJECT_ROOT / "results" / "revision_generated")).resolve()
+if OUTPUT_ROOT == (PROJECT_ROOT / "results" / "revision").resolve() or (PROJECT_ROOT / "results" / "revision").resolve() in OUTPUT_ROOT.parents:
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not point to or be inside results/revision.")
+OUTPUT_DIR = OUTPUT_ROOT / "b3_calibration"
+FIGURES_DIR = OUTPUT_ROOT / "figures"
 BASELINE_MODEL_PATH = PROJECT_ROOT / "results" / "modeling" / "final_model.joblib"
 
 def run_experiment_b3():
@@ -289,9 +295,9 @@ In equal-frequency binning, predicted probabilities closely track observed event
 - **Failed Fits:** {failed_fits:,} (No numerical singularities or infinite logit occurrences; `eps = 1e-15` properly contained boundary extremes).
 
 ## 4. Visual Artifacts
-- **High-Resolution Raster:** `results/revision_part1/figures/b3_calibration_reliability_curve.png`
-- **Vector Graphics:** `results/revision_part1/figures/b3_calibration_reliability_curve.pdf`
-- **Structured Data:** `results/revision_part1/b3_calibration/calibration_plot_data.json`
+- **High-Resolution Raster:** `${REVISION_ROOT}/figures/b3_calibration_reliability_curve.png`
+- **Vector Graphics:** `${REVISION_ROOT}/figures/b3_calibration_reliability_curve.pdf`
+- **Structured Data:** `${REVISION_ROOT}/b3_calibration/calibration_plot_data.json`
 """
     with open(OUTPUT_DIR / "b3_summary.md", "w", encoding="utf-8") as f:
         f.write(summary_md)

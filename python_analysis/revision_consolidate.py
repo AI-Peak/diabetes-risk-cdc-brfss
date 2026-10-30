@@ -2,21 +2,28 @@
 Revision Artifacts Consolidator & Manifest Generator
 ---------------------------------------------------
 Aggregates experimental outputs from B1-B7 into:
-  - results/revision_part1/experiment_manifest.json
-  - results/revision_part1/consolidated_results.json
-  - results/revision_part1/experiment_summary.md
+  - results/revision_generated/experiment_manifest.json
+  - results/revision_generated/consolidated_results.json
+  - results/revision_generated/experiment_summary.md
 """
 
 import sys
 import hashlib
 import json
+import os
 import time
 from pathlib import Path
 import subprocess
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-REVISION_DIR = PROJECT_ROOT / "results" / "revision_part1"
+_output_dir_env = os.environ.get("DAP_REVISION_OUTPUT_DIR")
+if _output_dir_env is not None and not _output_dir_env.strip():
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not be empty or whitespace-only.")
+REVISION_DIR = Path(_output_dir_env or str(PROJECT_ROOT / "results" / "revision_generated")).resolve()
+PUBLISHED_REVISION_DIR = (PROJECT_ROOT / "results" / "revision").resolve()
+if REVISION_DIR == PUBLISHED_REVISION_DIR or PUBLISHED_REVISION_DIR in REVISION_DIR.parents:
+    raise ValueError("DAP_REVISION_OUTPUT_DIR must not point to or be inside results/revision.")
 RAW_DATA_PATH = PROJECT_ROOT / "data" / "raw" / "diabetes_binary_health_indicators_BRFSS2015.csv"
 
 def compute_sha256(filepath: Path) -> str:
@@ -224,7 +231,7 @@ def build_manifest_and_consolidate():
 - Calibration Slope: 0.9589 (95% CI: [0.9342, 0.9854]).
 - Calibration Intercept: -0.0515 (95% CI: [-0.0861, -0.0148]).
 - 1,000 stratified bootstrap resamples completed with 1,000/1,000 successful fits (0 failures).
-- Publication-quality reliability diagram exported to `results/revision_part1/figures/b3_calibration_reliability_curve.png` and `.pdf`.
+- Publication-quality reliability diagram exported to `${REVISION_ROOT}/figures/b3_calibration_reliability_curve.png` and `.pdf`.
 
 ### Experiment B4: Decision Curve Analysis (DCA)
 - Net benefit evaluated across thresholds 0.05 to 0.40.
