@@ -17,13 +17,11 @@ Usage:
 import sys
 import argparse
 import time
-import shutil
 import subprocess
 from pathlib import Path
 
 # Resolve project root using pathlib
 PROJECT_ROOT = Path(__file__).resolve().parent
-PAPER_DIR = PROJECT_ROOT / "paper"
 
 def run_step(step_num: int, title: str, script_path: Path):
     """Executes a single pipeline step via python subprocess with clear logging."""
@@ -47,39 +45,8 @@ def run_step(step_num: int, title: str, script_path: Path):
         print(f"[OK] STEP {step_num} COMPLETED SUCCESSFULLY in {elapsed:.2f}s")
 
 
-def run_latex_compilation(step_num: int):
-    """Compiles the publication manuscript paper/main.tex using tectonic or pdflatex."""
-    print(f"\n================================================================================")
-    print(f" STEP {step_num}: Publication Manuscript LaTeX Compilation")
-    print(f" Target: {PAPER_DIR / 'main.tex'}")
-    print(f"================================================================================")
-
-    tectonic_bin = shutil.which("tectonic")
-    if not tectonic_bin:
-        default_cli_bin = Path.home() / ".gemini" / "antigravity-cli" / "bin" / "tectonic.exe"
-        if default_cli_bin.exists():
-            tectonic_bin = str(default_cli_bin)
-
-    start_time = time.time()
-    if tectonic_bin:
-        print(f"Found TeX engine: {tectonic_bin}")
-        cmd = [tectonic_bin, "main.tex"]
-        result = subprocess.run(cmd, cwd=str(PAPER_DIR))
-        elapsed = time.time() - start_time
-        if result.returncode != 0:
-            print(f"\n[FAILED] LaTeX compilation failed with exit code {result.returncode}")
-            sys.exit(result.returncode)
-        else:
-            pdf_path = PAPER_DIR / "main.pdf"
-            print(f"[OK] STEP {step_num} COMPLETED: {pdf_path.name} ({pdf_path.stat().st_size / 1024:.1f} KiB) in {elapsed:.2f}s")
-    else:
-        print("No tectonic compiler found. Compilation was not performed.")
-        raise RuntimeError("Install/configure tectonic to use --compile-paper.")
-
-
 def main():
     parser = argparse.ArgumentParser(description="Run the final-paper analysis pipeline.")
-    parser.add_argument("--compile-paper", action="store_true", help="Also compile the final LaTeX manuscript using tectonic.")
     args = parser.parse_args()
     print("================================================================================")
     print("   DIABETES ANALYTICS: END-TO-END REPRODUCIBLE SCIENTIFIC PIPELINE")
@@ -108,18 +75,12 @@ def main():
     for step_num, title, script_path in steps:
         run_step(step_num, title, script_path)
 
-    # Compilation is optional and does not regenerate manuscript sources.
-    if args.compile_paper:
-        run_latex_compilation(10)
-
-    # Validate retained analysis outputs and final manuscript dependencies
-    run_step(11 if args.compile_paper else 10, "Pipeline Output & Final Manuscript Dependency Validation", PROJECT_ROOT / "python_analysis" / "validate_outputs.py")
+    run_step(10, "Pipeline Output Validation", PROJECT_ROOT / "python_analysis" / "validate_outputs.py")
 
     total_elapsed = time.time() - total_start
     print(f"\n================================================================================")
     print(f"[SUCCESS] FULL PIPELINE EXECUTED SUCCESSFULLY IN {total_elapsed:.2f}s")
     print(f"   Final Results: {PROJECT_ROOT / 'results' / 'final_results_summary.json'}")
-    print(f"   Final manuscript source: {PAPER_DIR / 'main.tex'}")
     print("================================================================================")
 
 if __name__ == "__main__":

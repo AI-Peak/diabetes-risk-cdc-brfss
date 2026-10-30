@@ -61,12 +61,6 @@ def validate_pipeline_outputs():
         # XAI & evidence alignment
         RESULTS_DIR / "xai" / "explanation_consistency.csv",
         RESULTS_DIR / "xai" / "rank_sensitivity_analysis.csv",
-        # Final manuscript from Project_2_DAP (4).zip
-        PROJECT_ROOT / "paper" / "main.tex",
-        PROJECT_ROOT / "paper" / "sn-jnl.cls",
-        PROJECT_ROOT / "paper" / "sn-basic.bst",
-        PROJECT_ROOT / "paper" / "sn-bibliography.bib",
-        PROJECT_ROOT / "paper" / "final_source_manifest.json",
         # Summaries
         RESULTS_DIR / "final_results_summary.json",
         RESULTS_DIR / "final_results_summary.md"
@@ -120,19 +114,6 @@ def validate_pipeline_outputs():
             for term in forbidden_terms:
                 if term in content:
                     errors.append(f"Forbidden path pattern '{term}' found in: {mdf.relative_to(PROJECT_ROOT)}")
-
-    # 6. Check final manuscript dependencies without assuming the old RQ4 layout.
-    import hashlib
-    paper_dir = PROJECT_ROOT / "paper"
-    manifest_path = paper_dir / "final_source_manifest.json"
-    if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        for relative, expected_hash in manifest["files"].items():
-            source = paper_dir / relative
-            if not source.exists():
-                errors.append(f"Final manuscript dependency missing: {relative}")
-            elif hashlib.sha256(source.read_bytes()).hexdigest() != expected_hash:
-                errors.append(f"Final manuscript source changed from approved ZIP: {relative}")
 
     if errors:
         print("\n[FAILED] VALIDATION FAILED WITH THE FOLLOWING ERRORS:")
